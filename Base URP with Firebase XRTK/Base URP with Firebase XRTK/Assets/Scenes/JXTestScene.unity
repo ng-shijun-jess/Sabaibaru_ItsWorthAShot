@@ -201,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096237909}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.121, y: 1.33, z: -4.703}
+  m_LocalPosition: {x: -0.121, y: 1.33, z: -6.551}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -307,6 +307,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MedievalTavern
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883065952342789125, guid: e307f66868af3e34abd69fbd4e5647e2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883065952691257785, guid: e307f66868af3e34abd69fbd4e5647e2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883065952736577406, guid: e307f66868af3e34abd69fbd4e5647e2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883065952859666242, guid: e307f66868af3e34abd69fbd4e5647e2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e307f66868af3e34abd69fbd4e5647e2, type: 3}
@@ -492,6 +512,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Customer3
       objectReference: {fileID: 0}
+    - target: {fileID: 1099518181691861378, guid: e6c61b0030a207641b6342059b9b8cb2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6c61b0030a207641b6342059b9b8cb2, type: 3}
 --- !u!1001 &5331287033193200028
@@ -505,6 +530,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Customer1_Static
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989390935371736711, guid: dc74992e8e82c3f48bd6084418c466cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5653759375510256701, guid: dc74992e8e82c3f48bd6084418c466cc,
         type: 3}
@@ -630,6 +660,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Customer3_Static
       objectReference: {fileID: 0}
+    - target: {fileID: 9215343832128089173, guid: cb31a85499b717440b148e107240e3b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb31a85499b717440b148e107240e3b7, type: 3}
 --- !u!1001 &9036962021257989515
@@ -639,10 +674,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3171423358282482940, guid: 745acf70a109feb4e861b5a5a6d6628c,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8190029868453348412, guid: 745acf70a109feb4e861b5a5a6d6628c,
         type: 3}
       propertyPath: m_Name
       value: Customer1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190029868453348412, guid: 745acf70a109feb4e861b5a5a6d6628c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8854926142628437638, guid: 745acf70a109feb4e861b5a5a6d6628c,
         type: 3}
