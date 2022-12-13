@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="firebase_database_url" translatable="false">https://its-worth-a-shot-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+  <string name="gcm_defaultSenderId" translatable="false">613566342054</string>
+  <string name="google_storage_bucket" translatable="false">its-worth-a-shot.appspot.com</string>
+  <string name="project_id" translatable="false">its-worth-a-shot</string>
+  <string name="google_api_key" translatable="false">AIzaSyAnv5cN_Vm4C-Jdx4SB6xMvCS2pXS3qlzI</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAnv5cN_Vm4C-Jdx4SB6xMvCS2pXS3qlzI</string>
+  <string name="google_app_id" translatable="false">1:613566342054:android:f70f88dd17d1eeac342567</string>
+  <string name="default_web_client_id" translatable="false">613566342054-e7q0jn8vris8ri2q1ikmotf0bqgk2f2f.apps.googleusercontent.com</string>
+</resources>
