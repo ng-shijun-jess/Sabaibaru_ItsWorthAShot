@@ -6,6 +6,7 @@ using TMPro;
 
 public class AICustomer1 : MonoBehaviour
 {
+    public GameObject aiCanvas;
     public TextMeshProUGUI timerText;
     public Image timerBar;
 
@@ -26,6 +27,11 @@ public class AICustomer1 : MonoBehaviour
         timerText.text = currentTime.ToString("0") + "s";
 
         lerpSpeed = 3f * Time.deltaTime;
+
+        if (currentTime <= 0)
+        {
+            aiCanvas.SetActive(false);
+        }
 
         TimerBarFiller();
         ColorChanger();

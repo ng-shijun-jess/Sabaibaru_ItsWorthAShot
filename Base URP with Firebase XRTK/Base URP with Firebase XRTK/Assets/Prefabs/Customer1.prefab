@@ -2640,6 +2640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1baea07ea98c9e43b1582a737fc5177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aiCanvas: {fileID: 8025880588650020779}
   timerText: {fileID: 3060998416365130409}
   timerBar: {fileID: 3883240503280977227}
 --- !u!1 &8245173411993724775
