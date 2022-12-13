@@ -372,6 +372,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Erika Archer
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 4b41fd0bfab54714297c9be782279aaf,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 731e017a872022842a724ff7f38804f3, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 4b41fd0bfab54714297c9be782279aaf,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b41fd0bfab54714297c9be782279aaf, type: 3}
 --- !u!1 &2018435911
