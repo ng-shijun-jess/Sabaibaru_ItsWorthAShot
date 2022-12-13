@@ -11,6 +11,7 @@ public class AICustomer1 : MonoBehaviour
 
     float waitTime;
     float currentTime;
+    float lerpSpeed; 
 
     void Start()
     {
@@ -23,11 +24,22 @@ public class AICustomer1 : MonoBehaviour
     {
         currentTime -= 1 * Time.deltaTime;
         timerText.text = currentTime.ToString("0") + "s";
+
+        lerpSpeed = 3f * Time.deltaTime;
+
         TimerBarFiller();
+        ColorChanger();
     }
 
     void TimerBarFiller()
     {
-        timerBar.fillAmount = currentTime / waitTime;   
+        timerBar.fillAmount = Mathf.Lerp(timerBar.fillAmount, currentTime/waitTime, lerpSpeed);   
+    }
+
+    void ColorChanger()
+    {
+        Color timeColor = Color.Lerp(Color.red, Color.green, (currentTime / waitTime));
+
+        timerBar.color = timeColor;
     }
 }
