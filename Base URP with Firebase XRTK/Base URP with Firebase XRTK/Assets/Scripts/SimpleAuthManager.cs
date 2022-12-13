@@ -19,6 +19,7 @@ public class SimpleAuthManager : MonoBehaviour
 {
     //Firebase references
     public FirebaseAuth auth;
+    public DatabaseReference dbReference;
 
     //retrieve user text
     public TMP_InputField emailInput;
@@ -42,15 +43,42 @@ public class SimpleAuthManager : MonoBehaviour
     void InitializeFirebase()
     {
         auth = FirebaseAuth.DefaultInstance;
+        dbReference = FirebaseDatabase.DefaultInstance.RootReference;
     }
     
-    public void SignUpNewUser()
+    public async void SignUpNewUser()
     {
-        Debug.Log("Sign Up method...");
         string email = emailInput.text.Trim();
         string password = passwordInput.text.Trim();
 
-        auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task =>
+        if(ValidateEmail(email) && ValidatePassword(password))
+        {
+            FirebaseUser newPlayer = await SignUpNewUserOnly(email, password);
+
+            string username = usernameInput.text;
+
+            if (newPlayer != null)
+            {
+                await CreateNewSimplePlayer(newPlayer.UserId, username, username, newPlayer.Email);
+                await UpdatePlayerDisplayName(username); //update user's display name in auth service
+                SceneManager.LoadScene(1);
+            }
+        }
+        else
+        {
+            errorMsgContent.text = "Error in Signing Up.Invalid email or password";
+            errorMsgContent.gameObject.SetActive(true);
+        }
+        
+    }
+    
+    public async Task<FirebaseUser> SignUpNewUserOnly(string email,string password)
+    {
+        Debug.Log("Sign Up method...");
+        
+
+        FirebaseUser newPlayer = null;
+        await auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task =>
         {
             if(task.IsFaulted || task.IsCanceled)
             {
@@ -59,11 +87,56 @@ public class SimpleAuthManager : MonoBehaviour
 
             else if(task.IsCompleted)
             {
-                FirebaseUser newPlayer = task.Result;
+                newPlayer = task.Result;
+
                 Debug.LogFormat("NewPlayer Details {0} {1}", newPlayer.UserId, newPlayer.Email);
-                SceneManager.LoadScene(1);
             }
         });
+        return newPlayer;
+    }
+
+    public async Task CreateNewSimplePlayer(string uuid, string displayName,
+       string userName, string email)
+    {
+        SimpleGamePlayer newPlayer = new SimpleGamePlayer(displayName, userName, email);
+        Debug.LogFormat("Player details : {0}", newPlayer.PrintPlayer());
+
+        //root/players/$uuid
+        await dbReference.Child("players/" + uuid).SetRawJsonValueAsync(newPlayer.SimpleGamePlayerToJson());
+
+        //update auth player with new display name -> tagging along the username input field
+        //UpdatePlayerDisplayName(displayName);
+    }
+
+    public async Task UpdatePlayerDisplayName(string displayName)
+    {
+        if(auth.CurrentUser != null)
+        {
+            UserProfile profile = new UserProfile { 
+                DisplayName = displayName 
+            };
+            await auth.CurrentUser.UpdateUserProfileAsync(profile).ContinueWithOnMainThread(task =>
+            {
+                if (task.IsCanceled)
+                {
+                    Debug.LogError("UpdateUserProfileAsync was cancelled");
+                    return;
+                }
+                if (task.IsFaulted)
+                {
+                    Debug.LogError("UpdateUserProfileasync encountered an error: " + task.Exception);
+                    return;
+                }
+                Debug.Log("User profile updated successfully");
+                Debug.LogFormat("Checking current user display name from auth {0}", GetCurrentUserDisplayName());
+            });
+        }
+    }
+ 
+
+    public string GetCurrentUserDisplayName()
+    {
+        return auth.CurrentUser.DisplayName;
     }
 
     public void SignInUser()
@@ -71,19 +144,29 @@ public class SimpleAuthManager : MonoBehaviour
         Debug.Log("Sign In method...");
         string email = emailInput.text.Trim();
         string password = passwordInput.text.Trim();
-        auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task =>
-         {
-             if (task.IsFaulted || task.IsCanceled)
-             {
-                 Debug.LogError("Sorry, there was an error signing in your account, ERROR: " + task.Exception);
-             }
-             else if (task.IsCompleted)
-             {
-                 FirebaseUser currentPlayer = task.Result;
-                 Debug.LogFormat("Welcome to It's Worth A Shot {0} :: {1}", currentPlayer.UserId, currentPlayer.Email);
-                 SceneManager.LoadScene(1);
-             }
-         });
+
+        if(ValidateEmail(email) && ValidatePassword(password))
+        {
+            auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task =>
+            {
+                if (task.IsFaulted || task.IsCanceled)
+                {
+                    Debug.LogError("Sorry, there was an error signing in your account, ERROR: " + task.Exception);
+                }
+                else if (task.IsCompleted)
+                {
+                    FirebaseUser currentPlayer = task.Result;
+                    Debug.LogFormat("Welcome to It's Worth A Shot {0} :: {1}", currentPlayer.UserId, currentPlayer.Email);
+                    SceneManager.LoadScene(1);
+                }
+            });
+        }
+        else
+        {
+            errorMsgContent.text = "Error in Signing in. Invalid email / password";
+
+        }
+        
     }
 
     public void SignOutUser()
@@ -146,6 +229,18 @@ public class SimpleAuthManager : MonoBehaviour
             isValid = true;
         }
 
+        return isValid;
+    }
+
+    public bool ValidatePassword (string password)
+    {
+        bool isValid = false;
+
+        //length of password at least 6 characters
+        if(password != "" && password.Length >= 6)
+        {
+            isValid = true;
+        }
         return isValid;
     }
 
