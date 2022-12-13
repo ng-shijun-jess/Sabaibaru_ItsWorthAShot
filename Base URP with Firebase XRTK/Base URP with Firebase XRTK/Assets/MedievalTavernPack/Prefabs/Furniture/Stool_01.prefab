@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 95472466468145578}
   - component: {fileID: 65541090695710492}
   - component: {fileID: 5729248397642908062}
+  - component: {fileID: 8396537607020431429}
   m_Layer: 0
   m_Name: Stool_01
   m_TagString: Untagged
@@ -135,3 +136,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &8396537607020431429
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156470949020172}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15200001, y: 0.22900002, z: 0.15200001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.22900002, z: 0}
+  m_TimeToStationary: 0.5
