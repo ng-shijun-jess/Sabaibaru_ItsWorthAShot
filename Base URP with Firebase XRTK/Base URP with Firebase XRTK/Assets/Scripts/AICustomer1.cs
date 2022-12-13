@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 using TMPro;
 
 public class AICustomer1 : MonoBehaviour
@@ -12,10 +13,21 @@ public class AICustomer1 : MonoBehaviour
 
     float waitTime;
     float currentTime;
-    float lerpSpeed; 
+    float lerpSpeed;
+    private GameObject aiDestination;
+
+    private NavMeshAgent customerAI;
+    private Animator customerAnimator;
+
+    private void Awake()
+    {
+        customerAI = GetComponent<NavMeshAgent>();
+        customerAnimator = GetComponent<Animator>();
+    }
 
     void Start()
     {
+        aiDestination = GameObject.FindGameObjectWithTag("AIDestination");
         waitTime = Random.Range(10, 20);
         currentTime = waitTime;
     }
@@ -31,6 +43,15 @@ public class AICustomer1 : MonoBehaviour
         if (currentTime <= 0)
         {
             aiCanvas.SetActive(false);
+            customerAnimator.SetBool("StartWalk", true);
+            customerAI.destination = aiDestination.transform.position;
+            if (customerAI.transform.position == customerAI.destination)
+            {
+                Debug.Log("reached");
+                customerAI.SetDestination(transform.position);
+                customerAnimator.SetBool("StartWalk", false);
+                Destroy(this.gameObject);
+            }
         }
 
         TimerBarFiller();
