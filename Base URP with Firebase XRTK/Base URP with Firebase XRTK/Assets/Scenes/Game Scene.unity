@@ -4692,7 +4692,8 @@ MonoBehaviour:
   - {fileID: 8190029868453348412, guid: 745acf70a109feb4e861b5a5a6d6628c, type: 3}
   - {fileID: 5725096179622691747, guid: 93ce7ac67c4f00c408b6e412a3431b90, type: 3}
   - {fileID: 1099518181691861378, guid: e6c61b0030a207641b6342059b9b8cb2, type: 3}
-  usedSpots: []
+  usedSpots:
+  - 1
   gameIsActive: 1
 --- !u!4 &1899922813
 Transform:
