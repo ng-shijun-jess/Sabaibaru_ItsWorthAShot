@@ -82,13 +82,20 @@ public class SimpleAuthManager : MonoBehaviour
         {
             if(task.IsFaulted || task.IsCanceled)
             {
-                Debug.LogError("Sorry, there was an error creating your new Account, ERROR: " + task.Exception);
+                if(task.Exception != null)
+                {
+                    string errorMsg = this.HandleSignUpError(task);
+                    errorMsgContent.text = errorMsg;
+                    Debug.Log("Error in signing up" + errorMsg);
+                    errorMsgContent.gameObject.SetActive(true);
+                }
+                //Debug.LogError("Sorry, there was an error creating your new Account, ERROR: " + task.Exception);
             }
 
             else if(task.IsCompleted)
             {
+                errorMsgContent.gameObject.SetActive(false);
                 newPlayer = task.Result;
-
                 Debug.LogFormat("NewPlayer Details {0} {1}", newPlayer.UserId, newPlayer.Email);
             }
         });
@@ -151,10 +158,15 @@ public class SimpleAuthManager : MonoBehaviour
             {
                 if (task.IsFaulted || task.IsCanceled)
                 {
-                    Debug.LogError("Sorry, there was an error signing in your account, ERROR: " + task.Exception);
+                    string errorMsg = this.HandleSigninError(task);
+                    errorMsgContent.text = errorMsg;
+                    Debug.Log("Error in sign in" + errorMsg);
+                    errorMsgContent.gameObject.SetActive(true);
+                    //Debug.LogError("Sorry, there was an error signing in your account, ERROR: " + task.Exception);
                 }
                 else if (task.IsCompleted)
                 {
+                    errorMsgContent.gameObject.SetActive(false);
                     FirebaseUser currentPlayer = task.Result;
                     Debug.LogFormat("Welcome to It's Worth A Shot {0} :: {1}", currentPlayer.UserId, currentPlayer.Email);
                     SceneManager.LoadScene(1);
@@ -164,6 +176,7 @@ public class SimpleAuthManager : MonoBehaviour
         else
         {
             errorMsgContent.text = "Error in Signing in. Invalid email / password";
+            errorMsgContent.gameObject.SetActive(true);
 
         }
         
@@ -242,6 +255,47 @@ public class SimpleAuthManager : MonoBehaviour
             isValid = true;
         }
         return isValid;
+    }
+
+    public string HandleSignUpError(Task<FirebaseUser> task)
+    {
+        string errorMsg = "";
+
+
+        if (task.Exception != null)
+        {
+            FirebaseException firebaseEx = task.Exception.GetBaseException() as FirebaseException;
+            AuthError errorCode = (AuthError)firebaseEx.ErrorCode;
+
+            errorMsg = "Sign up Fail\n";
+            switch (errorCode)
+            {
+                //if email is already used by another user
+                case AuthError.EmailAlreadyInUse:
+                    errorMsg += "Email already in use";
+                    break;
+                //if password is not valid
+                case AuthError.WeakPassword:
+                    errorMsg += "Password is weak. Use at least 6 characters";
+                    break;
+                //if password input is null
+                case AuthError.MissingPassword:
+                    errorMsg += "Password is missing";
+                    break;
+                //if email is not valid
+                case AuthError.InvalidEmail:
+                    errorMsg += "invalid email used";
+                    break;
+                //for any other error case
+                default:
+                    errorMsg += "Issue in authentication:" + errorCode;
+                    break;
+
+            }
+            Debug.Log("Error message " + errorMsg);
+        }
+
+        return errorMsg;
     }
 
     //handles user sign in errors
