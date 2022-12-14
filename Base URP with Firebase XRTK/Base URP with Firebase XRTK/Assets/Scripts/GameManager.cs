@@ -39,12 +39,12 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int scoreToAdd)
     {
         score += scoreToAdd;
-        scoreText.text = score;
+        scoreText.text = "Score: " + score;
     }
     public void UpdateTotalMoneyEarned(int moneyToAdd)
     {
         totalMoneyEarned += moneyToAdd;
-        totalMoneyEarnedText.text = totalMoneyEarned;
+        totalMoneyEarnedText.text = "Total Money Earned: " + totalMoneyEarned;
     }
 
     public void GameOver()
