@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - AIDestination
+  - spawnSpot0
+  - spawnSpot1
+  - spawnSpot2
+  - spawnSpot3
+  - spawnSpot4
+  - AICustomer
   layers:
   - Default
   - TransparentFX

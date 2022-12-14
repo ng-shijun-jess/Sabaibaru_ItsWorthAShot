@@ -23,8 +23,17 @@ public class AICustomer1 : MonoBehaviour
     private NavMeshAgent customerAI;
     private Animator customerAnimator;
 
+    // Reference Customer Spawner gameObject
+    private GameObject customerSpawner;
+    // Reference Customer Spawner script
+    private CustomerSpawner customerSpawnerScript;
+
     private void Awake()
     {
+        // Look for Customer Spawner gameObject
+        customerSpawner = GameObject.Find("CustomerSpawner");
+        // Look for Customer Spawner script on customer spawner gameObject
+        customerSpawnerScript = customerSpawner.GetComponent<CustomerSpawner>();
         // Find NavMeshAgent Component
         customerAI = GetComponent<NavMeshAgent>();
         // Find Animator component
@@ -33,6 +42,7 @@ public class AICustomer1 : MonoBehaviour
 
     void Start()
     {
+        
         // Find the AI's destination with object tag.
         aiDestination = GameObject.FindGameObjectWithTag("AIDestination");
         // Randomise total waiting time
@@ -54,7 +64,6 @@ public class AICustomer1 : MonoBehaviour
         if (currentTime <= 0)
         {
             aiCanvas.SetActive(false);
-            
             // Play walking animation
             customerAnimator.SetBool("StartWalk", true);
             // Set customerAI's destination to the leaving destination
