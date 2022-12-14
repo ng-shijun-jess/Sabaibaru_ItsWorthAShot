@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public SimpleAuthManager auth;
 
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI totalMoneyEarnedText;
     public TextMeshProUGUI gameOverText;
     public bool isGameActive;
     private int score;
@@ -40,6 +41,11 @@ public class GameManager : MonoBehaviour
         score += scoreToAdd;
         scoreText.text = score;
     }
+    public void UpdateTotalMoneyEarned(int moneyToAdd)
+    {
+        totalMoneyEarned += moneyToAdd;
+        totalMoneyEarnedText.text = totalMoneyEarned;
+    }
 
     public void GameOver()
     {
@@ -48,7 +54,7 @@ public class GameManager : MonoBehaviour
         {
             UpdatePlayerStat(this.score, xpPerGame, this.timePerGame, this.totalMoneyEarned, this.totalCustomersLeft, this.totalCustomersServed);
         }
-
+        isPlayerStatUpdated = true;
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
     }
@@ -56,5 +62,14 @@ public class GameManager : MonoBehaviour
     public void UpdatePlayerStat(int score, int xp, int totalTimeSpent, int totalMoneyEarned, int totalCustomersLeft, int totalCustomersServed)
     {
         firebaseMgr.UpdatePlayerStats(auth.GetCurrentUser().UserId, score, xp, totalTimeSpent, totalMoneyEarned, totalCustomersLeft, totalCustomersServed, auth.GetCurrentUserDisplayName());
+    }
+    private void Start()
+    {
+        isGameActive = true;
+        isPlayerStatUpdated = false;
+        score = 0;
+        totalMoneyEarned = 0;
+        UpdateScore(0);
+
     }
 }
