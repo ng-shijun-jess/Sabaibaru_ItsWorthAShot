@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CustomerSpawner : MonoBehaviour
 {
+    // Reference OrderSlipManager script
+    public OrderSlipManager orderSlipManager;
+
     // Spawn spots array
     public GameObject[] spawnSpots;
     // Customers array
@@ -24,6 +27,10 @@ public class CustomerSpawner : MonoBehaviour
 
         // Convert the index to string
         string spotToAdd = randomSpot.ToString();
+
+        // Call OrderSlipChange function from orderSlipManager Script
+        orderSlipManager.OrderSlipEnable(randomSpot, randomCustomer);
+
         // Add the used spawn spot from the usedSpots list
         usedSpots.Add(spotToAdd);
 
@@ -46,6 +53,10 @@ public class CustomerSpawner : MonoBehaviour
             {
                 // Randomise customer to spawn
                 int randomCustomer = Random.Range(0, customerArray.Length);
+
+                // Call OrderSlipChange function from orderSlipManager Script
+                orderSlipManager.OrderSlipEnable(randomSpot, randomCustomer);
+
                 // Add the used spot to the usedSpots list
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
@@ -56,6 +67,10 @@ public class CustomerSpawner : MonoBehaviour
             {
                 // Randomise customer to spawn
                 int randomCustomer = Random.Range(0, customerArray.Length);
+
+                // Call OrderSlipChange function from orderSlipManager Script
+                orderSlipManager.OrderSlipEnable(randomSpot, randomCustomer);
+
                 // Add the used spot to the usedSpots list
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
@@ -66,6 +81,10 @@ public class CustomerSpawner : MonoBehaviour
             {
                 // Randomise customer to spawn
                 int randomCustomer = Random.Range(0, customerArray.Length);
+
+                // Call OrderSlipChange function from orderSlipManager Script
+                orderSlipManager.OrderSlipEnable(randomSpot, randomCustomer);
+
                 // Add the used spot to the usedSpots list
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
@@ -76,6 +95,10 @@ public class CustomerSpawner : MonoBehaviour
             {
                 // Randomise customer to spawn
                 int randomCustomer = Random.Range(0, customerArray.Length);
+
+                // Call OrderSlipChange function from orderSlipManager Script
+                orderSlipManager.OrderSlipEnable(randomSpot, randomCustomer);
+
                 // Add the used spot to the usedSpots list
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
@@ -86,6 +109,10 @@ public class CustomerSpawner : MonoBehaviour
             {
                 // Randomise customer to spawn
                 int randomCustomer = Random.Range(0, customerArray.Length);
+
+                // Call OrderSlipChange function from orderSlipManager Script
+                orderSlipManager.OrderSlipEnable(randomSpot, randomCustomer);
+
                 // Add the used spot to the usedSpots list
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
