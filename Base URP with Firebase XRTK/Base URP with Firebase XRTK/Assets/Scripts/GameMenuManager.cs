@@ -17,9 +17,12 @@ public class GameMenuManager : MonoBehaviour
     public SimpleAuthManager authMgr;
     public GameObject signOutBtn;
 
-    public void InitializeFirebase()
-    {
+    public GameObject playBtn;
+    public TextMeshProUGUI displayName;
 
+    public void Awake()
+    {
+        displayName.text = "Welcome, " + authMgr.GetCurrentUserDisplayName();
     }
 
     public void SignOut()

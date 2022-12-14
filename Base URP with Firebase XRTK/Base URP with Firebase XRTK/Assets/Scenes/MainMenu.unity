@@ -1127,6 +1127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   authMgr: {fileID: 1252980905}
   signOutBtn: {fileID: 21455444}
+  playBtn: {fileID: 0}
+  displayName: {fileID: 1288133897}
 --- !u!4 &1279218214
 Transform:
   m_ObjectHideFlags: 0
