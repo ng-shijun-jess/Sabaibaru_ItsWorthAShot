@@ -29,31 +29,6 @@ public class MilkSpawnSpot : MonoBehaviour
                     milkSpawnerScript.usedSpots.Remove(j);
                 }
             }
-            /*if (this.gameObject.tag == "spawnSpot0")
-            {
-                customerSpawnerScript.usedSpots.Remove("0");
-                orderSlipManagerScript.OrderSlipDisable(0);
-            }
-            if (this.gameObject.tag == "spawnSpot1")
-            {
-                customerSpawnerScript.usedSpots.Remove("1");
-                orderSlipManagerScript.OrderSlipDisable(1);
-            }
-            if (this.gameObject.tag == "spawnSpot2")
-            {
-                customerSpawnerScript.usedSpots.Remove("2");
-                orderSlipManagerScript.OrderSlipDisable(2);
-            }
-            if (this.gameObject.tag == "spawnSpot3")
-            {
-                customerSpawnerScript.usedSpots.Remove("3");
-                orderSlipManagerScript.OrderSlipDisable(3);
-            }
-            if (this.gameObject.tag == "spawnSpot4")
-            {
-                customerSpawnerScript.usedSpots.Remove("4");
-                orderSlipManagerScript.OrderSlipDisable(4);
-            }*/
         }
     }
 }
