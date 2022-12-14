@@ -135,6 +135,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8882206278138089739}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &14623567
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.191
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.321
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_Name
+      value: MilkSpawnSpot2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa3899d17e09daf4bbc945feafb8c6a5, type: 3}
+--- !u!1 &14623568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 14623567}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &15546812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4721780193091316, guid: efdb3ed10ba9c6b418a492aa30ba0edd,
@@ -1048,6 +1123,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8882206278296846427}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &279367289
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.23000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.191
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.321
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_Name
+      value: MilkSpawnSpot3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa3899d17e09daf4bbc945feafb8c6a5, type: 3}
+--- !u!1 &279367290 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 279367289}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &282397987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4721780193091316, guid: efdb3ed10ba9c6b418a492aa30ba0edd,
@@ -1669,7 +1819,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &602252215
 MonoBehaviour:
@@ -1687,9 +1837,13 @@ MonoBehaviour:
     type: 3}
   spawnSpots:
   - {fileID: 1040125234}
-  - {fileID: 2121002845}
-  - {fileID: 1592560415}
-  - {fileID: 1747412696}
+  - {fileID: 1163697654}
+  - {fileID: 14623568}
+  - {fileID: 279367290}
+  - {fileID: 2069960860}
+  - {fileID: 1690579034}
+  - {fileID: 1969006245}
+  - {fileID: 1992535548}
   usedSpots: []
   gameIsActive: 1
   spotsFull: 0
@@ -2922,37 +3076,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8882206278969321425}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1040125234
+--- !u!1 &1040125234 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4800048145168520985}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1040125235}
-  m_Layer: 0
-  m_Name: Milk Spawn Spot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1040125235
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1040125234}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.52, y: 1.191, z: -7.321}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1046339670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4721780193091316, guid: efdb3ed10ba9c6b418a492aa30ba0edd,
@@ -3842,6 +3971,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4330417576706480, guid: 737755ded67dca042ab01806f71f63ce,
     type: 3}
   m_PrefabInstance: {fileID: 8882206277795875441}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1163697653
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.26999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.191
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.321
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_Name
+      value: MilkSpawnSpot1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa3899d17e09daf4bbc945feafb8c6a5, type: 3}
+--- !u!1 &1163697654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1163697653}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1185207665 stripped
 Transform:
@@ -5434,37 +5638,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8882206277663442672}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1592560415
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1592560416}
-  m_Layer: 0
-  m_Name: Milk Spawn Spot (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1592560416
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592560415}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01999998, y: 1.191, z: -7.321}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1611423893
 GameObject:
   m_ObjectHideFlags: 0
@@ -5932,6 +6105,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8882206278026877882}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1690579033
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.26999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9105
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.321
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_Name
+      value: Milk Spawn Spot (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa3899d17e09daf4bbc945feafb8c6a5, type: 3}
+--- !u!1 &1690579034 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1690579033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1729267996 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4721780193091316, guid: efdb3ed10ba9c6b418a492aa30ba0edd,
@@ -5968,37 +6216,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1611423898}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1747412696
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1747412697}
-  m_Layer: 0
-  m_Name: Milk Spawn Spot (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1747412697
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747412696}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.23000002, y: 1.191, z: -7.321}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1755408241
 GameObject:
@@ -6569,6 +6786,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8882206278432936486}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1969006244
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9105
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.321
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_Name
+      value: Milk Spawn Spot (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa3899d17e09daf4bbc945feafb8c6a5, type: 3}
+--- !u!1 &1969006245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1969006244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1970032702 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4721780193091316, guid: efdb3ed10ba9c6b418a492aa30ba0edd,
@@ -6580,6 +6872,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4208550900606004, guid: 0dcc6c5952f817b4ba249a3772b04abe,
     type: 3}
   m_PrefabInstance: {fileID: 8882206277671286184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1992535547
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.23000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9105
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.321
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_Name
+      value: Milk Spawn Spot (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa3899d17e09daf4bbc945feafb8c6a5, type: 3}
+--- !u!1 &1992535548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1992535547}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1993296413 stripped
 Transform:
@@ -6716,6 +7083,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8882206276917668118}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2069960859
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9105
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.321
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_Name
+      value: Milk Spawn Spot (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa3899d17e09daf4bbc945feafb8c6a5, type: 3}
+--- !u!1 &2069960860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2069960859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2077366567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4411039910446238, guid: f690e5c1212c4aa45950ed64cbe48316,
@@ -6752,37 +7194,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8882206277653483462}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2121002845
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2121002846}
-  m_Layer: 0
-  m_Name: Milk Spawn Spot (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2121002846
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121002845}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26999998, y: 1.191, z: -7.321}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2125211906 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4349549203921020, guid: 41c2416439f912f4e89bd6b1167f45e5,
@@ -7094,6 +7505,75 @@ Transform:
   m_Father: {fileID: 870543955}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4800048145168520985
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.191
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.321
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170794, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800048144412170795, guid: aa3899d17e09daf4bbc945feafb8c6a5,
+        type: 3}
+      propertyPath: m_Name
+      value: MilkSpawnSpot
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa3899d17e09daf4bbc945feafb8c6a5, type: 3}
 --- !u!1 &6476894279750166859
 GameObject:
   m_ObjectHideFlags: 0

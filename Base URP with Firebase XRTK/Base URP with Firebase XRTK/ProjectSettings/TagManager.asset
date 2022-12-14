@@ -11,6 +11,7 @@ TagManager:
   - spawnSpot3
   - spawnSpot4
   - AICustomer
+  - Drink
   layers:
   - Default
   - TransparentFX
