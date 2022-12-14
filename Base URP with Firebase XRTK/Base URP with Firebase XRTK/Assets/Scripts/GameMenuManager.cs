@@ -11,6 +11,7 @@ using Firebase.Extensions;
 using Firebase.Auth;
 using TMPro;
 
+
 public class GameMenuManager : MonoBehaviour
 {
     
