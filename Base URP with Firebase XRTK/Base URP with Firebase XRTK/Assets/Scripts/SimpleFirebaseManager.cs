@@ -6,6 +6,7 @@ using Firebase;
 using Firebase.Database;
 using Firebase.Extensions;
 using System;
+using System.Threading.Tasks;
 public class SimpleFirebaseManager : MonoBehaviour
 {
     DatabaseReference dbPlayerStatsReference;
@@ -52,7 +53,11 @@ public class SimpleFirebaseManager : MonoBehaviour
                 //check if there is an entry created
                 if (playerStats.Exists)
                 {
-                    //update
+                    //update player stats
+                    //compare existing highscore and set new highscore
+                    //add xp per game
+                    //add time spent
+
                     SimplePlayerStats sp = JsonUtility.FromJson<SimplePlayerStats>(playerStats.GetRawJsonValue());
                     sp.xp += xp;
                     sp.totalTimeSpent += totalTimeSpent;
@@ -90,5 +95,37 @@ public class SimpleFirebaseManager : MonoBehaviour
 
         dbLeaderboardsReference.Child(uuid).Child("highsScore").SetValueAsync(highScore);
         dbLeaderboardsReference.Child(uuid).Child("updatedOn").SetValueAsync(updatedOn);
+    }
+
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="uuid">retrieve form authenticate</param>
+    /// <returns></returns>
+    public async Task<SimplePlayerStats> GetPlayerStats(string uuid)
+    {
+        Query q = dbPlayerStatsReference.Child(uuid).LimitToFirst(1);
+        SimplePlayerStats playerStats = null;
+
+        await dbPlayerStatsReference.GetValueAsync().ContinueWithOnMainThread(task =>
+        {
+            if (task.IsCanceled|| task.IsFaulted)
+            {
+                Debug.LogError("Sorry, there was an error receiving player Stats: Error: " + task.Exception);
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot ds = task.Result;//path -> playerstats/$uuid
+                //path to the datasnap shot playerstats/$uuid/<we want this value>
+                playerStats = JsonUtility.FromJson<SimplePlayerStats>(ds.Child(uuid).GetRawJsonValue());
+
+                Debug.Log("ds..." +ds.GetRawJsonValue());
+                Debug.Log("player stats value.. " + playerStats.SimplePlayerStatsToJson());
+            }
+        });
+
+        return playerStats;
     }
 }
