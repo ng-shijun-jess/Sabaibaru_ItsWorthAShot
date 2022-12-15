@@ -340,7 +340,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 159011829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1279218213}
+        m_TargetAssemblyTypeName: GameMenuManager, Assembly-CSharp
+        m_MethodName: PlayerProfile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &159011829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1127,7 +1139,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   authMgr: {fileID: 1252980905}
   signOutBtn: {fileID: 21455444}
-  playBtn: {fileID: 0}
+  playBtn: {fileID: 1373610072}
+  LeaderboardBtn: {fileID: 1009870140}
+  playerProfileBtn: {fileID: 159011826}
   displayName: {fileID: 1288133897}
 --- !u!4 &1279218214
 Transform:
@@ -1431,7 +1445,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1373610075}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1279218213}
+        m_TargetAssemblyTypeName: GameMenuManager, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1373610075
 MonoBehaviour:
   m_ObjectHideFlags: 0
