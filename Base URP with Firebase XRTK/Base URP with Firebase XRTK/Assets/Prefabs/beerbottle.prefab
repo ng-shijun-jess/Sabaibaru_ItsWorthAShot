@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1917576380386219462}
   - component: {fileID: -7429235331503594051}
   m_Layer: 0
-  m_Name: beerbottle
+  m_Name: BeerBottle
   m_TagString: Drink
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8450936148320079506}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.44216, y: 0.8461255, z: -5.5743756}
+  m_LocalPosition: {x: 0, y: 0.122, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
