@@ -16,6 +16,8 @@ public class CustomerSpawner : MonoBehaviour
     public bool gameIsActive;
     public bool spotsFull;
 
+    public GameObject customer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,7 @@ public class CustomerSpawner : MonoBehaviour
         usedSpots.Add(spotToAdd);
 
         // Instantiate the customer at the spawn spot and orient to face the right direction
-        Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
+        customer = Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
 
         StartCoroutine("SpawnCustomer");
     }
@@ -61,7 +63,7 @@ public class CustomerSpawner : MonoBehaviour
                 // Add the used spot to the usedSpots list
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
-                Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
+                customer = Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
             }
 
             else if (!usedSpots.Contains("1") && spotToAdd == "1")
@@ -75,7 +77,7 @@ public class CustomerSpawner : MonoBehaviour
                 // Add the used spot to the usedSpots list
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
-                Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
+                customer = Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
             }
 
             else if (!usedSpots.Contains("2") && spotToAdd == "2")
@@ -89,7 +91,7 @@ public class CustomerSpawner : MonoBehaviour
                 // Add the used spot to the usedSpots list
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
-                Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
+                customer = Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
             }
 
             else if (!usedSpots.Contains("3") && spotToAdd == "3")
@@ -103,7 +105,7 @@ public class CustomerSpawner : MonoBehaviour
                 // Add the used spot to the usedSpots list
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
-                Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
+                customer = Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
             }
 
             else if (!usedSpots.Contains("4") && spotToAdd == "4")
@@ -114,7 +116,7 @@ public class CustomerSpawner : MonoBehaviour
                 // Add the used spot to the usedSpots list
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
-                Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
+                customer = Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
             }
             Debug.Log(spotToAdd);
         }

@@ -17,7 +17,7 @@ public class MilkSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i <= spawnSpots.Length; i++)
+        for (int i = 0; i < spawnSpots.Length; i++)
         {
             // Instantiate the Milk at the spawn spot and orient to face the right direction
             Instantiate(milkBottle, spawnSpots[i].transform.position, spawnSpots[i].transform.rotation);

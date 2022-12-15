@@ -17,6 +17,9 @@ public class AICustomer1 : MonoBehaviour
     float currentTime;
     float lerpSpeed;
 
+    // Check if Customer is given correct drink
+    public bool drinkGiven;
+
     // Destination of customer when leaving
     private GameObject aiDestination;
 
@@ -59,6 +62,25 @@ public class AICustomer1 : MonoBehaviour
         timerText.text = currentTime.ToString("0") + "s";
 
         lerpSpeed = 3f * Time.deltaTime;
+
+        if (drinkGiven)
+        {
+            Debug.Log("drinkGiven");
+            drinkGiven = false;
+            aiCanvas.SetActive(false);
+            // Play walking animation
+            customerAnimator.SetBool("StartWalk", true);
+            // Set customerAI's destination to the leaving destination
+            customerAI.destination = aiDestination.transform.position;
+            // If CustomerAI reaches its destination
+            if (customerAI.transform.position == customerAI.destination)
+            {
+                Debug.Log("reached");
+                // Set its destination to itself to stop it from moving
+                customerAI.SetDestination(transform.position);
+                Destroy(this.gameObject);
+            }
+        }
 
         // If Current waiting time left is 0
         if (currentTime <= 0)

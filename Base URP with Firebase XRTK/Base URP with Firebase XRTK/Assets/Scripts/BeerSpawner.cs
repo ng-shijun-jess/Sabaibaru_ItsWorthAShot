@@ -17,7 +17,7 @@ public class BeerSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i <= spawnSpots.Length; i++)
+        for (int i = 0; i < spawnSpots.Length; i++)
         {
             // Instantiate the Beer at the spawn spot and orient to face the right direction
             Instantiate(beer, spawnSpots[i].transform.position, spawnSpots[i].transform.rotation);
