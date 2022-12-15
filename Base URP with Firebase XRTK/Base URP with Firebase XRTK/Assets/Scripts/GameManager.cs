@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     public int xpPerGame = 5;
     public int timePerGame = 300;
 
+    public GameObject pauseMenu;
+    public GameObject gameOverMenu;
 
 
     public void RestartGame()
@@ -57,6 +59,7 @@ public class GameManager : MonoBehaviour
         isPlayerStatUpdated = true;
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
+
     }
 
     public void UpdatePlayerStat(int score, int xp, int totalTimeSpent, int totalMoneyEarned, int totalCustomersLeft, int totalCustomersServed)
@@ -71,5 +74,19 @@ public class GameManager : MonoBehaviour
         totalMoneyEarned = 0;
         UpdateScore(0);
 
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void Pause()
+    {
+        if (isGameActive)
+        {
+            isGameActive = false;
+            pauseMenu.SetActive(true);
+        }
     }
 }
