@@ -169,7 +169,7 @@ public class SimpleAuthManager : MonoBehaviour
                     errorMsgContent.gameObject.SetActive(false);
                     FirebaseUser currentPlayer = task.Result;
                     Debug.LogFormat("Welcome to It's Worth A Shot {0} :: {1}", currentPlayer.UserId, currentPlayer.Email);
-                    SceneManager.LoadScene(1);
+                    SceneManager.LoadScene(2);
                 }
             });
         }
