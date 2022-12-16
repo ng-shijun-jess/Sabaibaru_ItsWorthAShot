@@ -1896,7 +1896,7 @@ MonoBehaviour:
   playerName: {fileID: 1359730759}
   fbMgr: {fileID: 104158424}
   auth: {fileID: 1731336281}
-  mainMenuBtn: {fileID: 0}
+  mainMenuBtn: {fileID: 210264911}
 --- !u!1 &1359730757
 GameObject:
   m_ObjectHideFlags: 0
