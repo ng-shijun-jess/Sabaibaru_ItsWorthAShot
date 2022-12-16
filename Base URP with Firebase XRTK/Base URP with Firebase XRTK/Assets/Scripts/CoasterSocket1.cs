@@ -10,15 +10,20 @@ public class CoasterSocket1 : MonoBehaviour
     // Check if WrongDrink coroutine is started
     bool coroutineStarted;
 
+    // Reference Customer Prefab
     public GameObject customerPrefab;
+    // Reference Customer Script
     private AICustomer1 customerScript;
 
+    // Reference Text Canvas on customer prefab
     private Transform wrongDrinkCanvas;
 
     public void InitialiseCustomerScript()
     {
         Debug.Log("InitialiseCustomer");
+        // Set Customer Prefab transform to find child canvas
         Transform customerTransform = customerPrefab.transform;
+        // Find Child Text Canvas
         wrongDrinkCanvas = customerTransform.Find("Text Canvas");
         customerScript = customerPrefab.GetComponent<AICustomer1>();
     }
@@ -38,6 +43,7 @@ public class CoasterSocket1 : MonoBehaviour
                 customerScript.drinkGiven = true;
                 drinkSnapped = false;
                 Destroy(other.gameObject);
+                // Add Money here
             }
             else if (other.gameObject.name == "Beer(Clone)" && currentDrink == "Beer")
             {
@@ -45,6 +51,7 @@ public class CoasterSocket1 : MonoBehaviour
                 customerScript.drinkGiven = true;
                 drinkSnapped = false;
                 Destroy(other.gameObject);
+                // Add Money Here
             }
             else if (other.gameObject.name == "Corba(Clone)" && currentDrink == "Corba")
             {
@@ -52,6 +59,7 @@ public class CoasterSocket1 : MonoBehaviour
                 customerScript.drinkGiven = true;
                 drinkSnapped = false;
                 Destroy(other.gameObject);
+                // Add Money Here
             }
             else
             {
@@ -69,19 +77,23 @@ public class CoasterSocket1 : MonoBehaviour
                 customerScript.drinkGiven = true;
                 drinkSnapped = false;
                 Destroy(other.gameObject);
+                // Add Money Here
             }
             else if (other.gameObject.name == "Beer(Clone)" && currentDrink == "Beer(Clone)")
             {
                 customerScript.drinkGiven = true;
                 drinkSnapped = false;
                 Destroy(other.gameObject);
+                // Add Money Here
             }
             else if (other.gameObject.name == "Corba(Clone)" && currentDrink == "Corba(Clone)")
             {
                 customerScript.drinkGiven = true;
                 drinkSnapped = false;
                 Destroy(other.gameObject);
+                // Add Money Here
             }
+            // If Given Drink is wrong
             else
             {
                 if (!coroutineStarted)

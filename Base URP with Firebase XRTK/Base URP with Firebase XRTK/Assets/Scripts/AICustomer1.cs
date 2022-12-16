@@ -31,6 +31,12 @@ public class AICustomer1 : MonoBehaviour
     // Reference Customer Spawner script
     private CustomerSpawner customerSpawnerScript;
 
+    // Check if lost customer has been added to database
+    bool addLostCustomer;
+
+    // Check if Served customer has been added to database
+    bool addServedCustomer;
+
     private void Awake()
     {
         // Look for Customer Spawner gameObject
@@ -64,6 +70,26 @@ public class AICustomer1 : MonoBehaviour
 
         if (drinkGiven)
         {
+            if (!addServedCustomer)
+            {
+                addServedCustomer = true;
+                /// Add Served customer here                                   DATABASE
+                if (this.gameObject.name == "Customer1")
+                {
+                    /// Add Money Earned Here                                   DATABASE
+                }
+
+                if (this.gameObject.name == "Customer2")
+                {
+                    /// Add Money Earned Here                                   DATABASE
+                }
+
+                if (this.gameObject.name == "Customer3")
+                {
+                    /// Add Money Earned Here                                   DATABASE
+                }
+            }
+
             Debug.Log("drinkGiven");
             aiCanvas.SetActive(false);
             // Play walking animation
@@ -84,6 +110,11 @@ public class AICustomer1 : MonoBehaviour
         // If Current waiting time left is 0
         if (currentTime <= 0)
         {
+            if (!addLostCustomer)
+            {
+                addLostCustomer = true;
+                /// Add lost customer here                                   DATABASE
+            }
             aiCanvas.SetActive(false);
             // Play walking animation
             customerAnimator.SetBool("StartWalk", true);
@@ -103,16 +134,26 @@ public class AICustomer1 : MonoBehaviour
         ColorChanger();
     }
 
+    // Change fillamount of timerbar over time
     void TimerBarFiller()
     {
         // Change timer bar fill amount according to waiting time left
         timerBar.fillAmount = Mathf.Lerp(timerBar.fillAmount, currentTime/waitTime, lerpSpeed);   
     }
 
+    // Change colour of timer bar over time
     void ColorChanger()
     {
         Color timeColor = Color.Lerp(Color.red, Color.green, (currentTime / waitTime));
 
         timerBar.color = timeColor;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Drink")
+        {
+            /// Add Customers hit here                      DATABASE
+        }
     }
 }
