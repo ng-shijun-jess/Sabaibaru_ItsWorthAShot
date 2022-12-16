@@ -66,7 +66,6 @@ public class AICustomer1 : MonoBehaviour
         if (drinkGiven)
         {
             Debug.Log("drinkGiven");
-            drinkGiven = false;
             aiCanvas.SetActive(false);
             // Play walking animation
             customerAnimator.SetBool("StartWalk", true);
@@ -79,6 +78,7 @@ public class AICustomer1 : MonoBehaviour
                 // Set its destination to itself to stop it from moving
                 customerAI.SetDestination(transform.position);
                 Destroy(this.gameObject);
+                drinkGiven = false;
             }
         }
 

@@ -16,6 +16,9 @@ public class CustomerSpawner : MonoBehaviour
     public bool gameIsActive;
     public bool spotsFull;
 
+    // Reference CoasterSocket0 Script
+    public CoasterSocket0 coasterSocket0;
+
     public GameObject customer;
 
     // Start is called before the first frame update
@@ -39,6 +42,11 @@ public class CustomerSpawner : MonoBehaviour
 
         // Instantiate the customer at the spawn spot and orient to face the right direction
         customer = Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
+
+        if (randomSpot == 0)
+        {
+            orderSlipManager.SetSocket0Customer();
+        }
 
         StartCoroutine("SpawnCustomer");
     }
@@ -64,6 +72,9 @@ public class CustomerSpawner : MonoBehaviour
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
                 customer = Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
+
+                orderSlipManager.SetSocket0Customer();
+
             }
 
             else if (!usedSpots.Contains("1") && spotToAdd == "1")

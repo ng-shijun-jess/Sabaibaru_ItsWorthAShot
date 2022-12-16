@@ -28,7 +28,6 @@ public class OrderSlipManager : MonoBehaviour
                     if (j == "coasterSocket0")
                     {
                         coasterSocket0.currentDrink = "Beer";
-                        coasterSocket0.customerPrefab = customerSpawner.customer;
                         coasterSocket0.CheckDrink();
                     }
                 }
@@ -40,7 +39,6 @@ public class OrderSlipManager : MonoBehaviour
                     if (j == "coasterSocket0")
                     {
                         coasterSocket0.currentDrink = "Corba";
-                        coasterSocket0.customerPrefab = customerSpawner.customer;
                         coasterSocket0.CheckDrink();
                     }
                 }
@@ -52,7 +50,6 @@ public class OrderSlipManager : MonoBehaviour
                     if (j == "coasterSocket0")
                     {
                         coasterSocket0.currentDrink = "Milk";
-                        coasterSocket0.customerPrefab = customerSpawner.customer;
                         coasterSocket0.CheckDrink();
                     }
                 }
@@ -69,5 +66,11 @@ public class OrderSlipManager : MonoBehaviour
                 orderSlips[i].SetActive(false);
             }
         }
+    }
+
+    public void SetSocket0Customer()
+    {
+        coasterSocket0.customerPrefab = customerSpawner.customer;
+        coasterSocket0.InitialiseCustomerScript();
     }
 }
