@@ -43,6 +43,10 @@ public class CoasterSocket0 : MonoBehaviour
                 customerScript.drinkGiven = true;
                 drinkSnapped = false;
             }
+            else
+            {
+                Destroy(other.gameObject);
+            }
         }
     }
 
@@ -64,6 +68,10 @@ public class CoasterSocket0 : MonoBehaviour
             {
                 customerScript.drinkGiven = true;
                 drinkSnapped = false;
+            }
+            else
+            {
+                Destroy(other.gameObject);
             }
         }
     }
