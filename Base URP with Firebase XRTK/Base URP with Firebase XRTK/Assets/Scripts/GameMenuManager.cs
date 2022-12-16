@@ -26,6 +26,7 @@ public class GameMenuManager : MonoBehaviour
     public void Awake()
     {
         displayName.text = "Welcome, " + authMgr.GetCurrentUserDisplayName();
+        
     }
 
     public void SignOut()
