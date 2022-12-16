@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isGameActive = false;
+        Time.timeScale = 0;
         if(!isPlayerStatUpdated)
         {
             UpdatePlayerStat(this.score, xpPerGame, this.timePerGame, this.totalMoneyEarned, this.totalCustomersLeft, this.totalCustomersServed);
@@ -88,6 +89,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameActive)
         {
+            Time.timeScale = 0;
             isGameActive = false;
             pauseMenu.SetActive(true);
         }
