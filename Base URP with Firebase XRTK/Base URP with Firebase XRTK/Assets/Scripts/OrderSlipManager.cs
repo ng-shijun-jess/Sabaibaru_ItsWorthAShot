@@ -117,6 +117,11 @@ public class OrderSlipManager : MonoBehaviour
                         coasterSocket4.CheckDrink();
                     }
                 }
+
+                if (customerIndex == 3)
+                {
+                    orderSlipText[i].text = "!@#$%!";
+                }
             }
         }
     }
