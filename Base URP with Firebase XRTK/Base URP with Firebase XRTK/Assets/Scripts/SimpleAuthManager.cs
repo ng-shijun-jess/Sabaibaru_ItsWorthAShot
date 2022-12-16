@@ -33,6 +33,9 @@ public class SimpleAuthManager : MonoBehaviour
     public GameObject signOutBtn;
 
     public TextMeshProUGUI errorMsgContent;
+    public TextMeshProUGUI displayName;
+
+
 
     private void Awake()
     {
@@ -169,7 +172,7 @@ public class SimpleAuthManager : MonoBehaviour
                     errorMsgContent.gameObject.SetActive(false);
                     FirebaseUser currentPlayer = task.Result;
                     Debug.LogFormat("Welcome to It's Worth A Shot {0} :: {1}", currentPlayer.UserId, currentPlayer.Email);
-                    SceneManager.LoadScene(2);
+                    displayName.text = "Welcome, " + GetCurrentUserDisplayName();
                 }
             });
         }

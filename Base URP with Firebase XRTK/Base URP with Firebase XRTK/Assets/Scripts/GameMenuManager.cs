@@ -21,13 +21,8 @@ public class GameMenuManager : MonoBehaviour
     public GameObject startGameBtn;
     public GameObject leaderboardBtn;
     public GameObject playerProfileBtn;
-    public TextMeshProUGUI displayName;
 
-    public void Awake()
-    {
-        displayName.text = "Welcome, " + authMgr.GetCurrentUserDisplayName();
-        
-    }
+
 
     public void SignOut()
     {
