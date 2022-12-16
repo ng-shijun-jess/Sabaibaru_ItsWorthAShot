@@ -32,16 +32,23 @@ public class SimplePlayerStatsManager : MonoBehaviour
     public async void UpdatePlayerStats(string uuid)
     {
         SimplePlayerStats playerStats = await fbMgr.GetPlayerStats(uuid);
-
         Debug.Log("player Stats...:  " + playerStats.SimplePlayerStatsToJson());
 
         playerHighScore.text = playerStats.highScore.ToString();
         playerTotalMoneyEarned.text = "$ " + playerStats.totalMoneyEarned;
-        playerTotalTimeSpent.text = playerStats.totalTimeSpent + " s";
+        playerTotalTimeSpent.text = playerStats.totalTimeSpent + " secs";
         playerTotalCustomersServed.text = playerStats.totalCustomersServed.ToString();
         playerTotalCustomersLeft.text = playerStats.totalCustomersLeft.ToString();
 
         playerName.text = auth.GetCurrentUserDisplayName();
+    }
+
+    public string UnixToDateTime(long timestamp)
+    {
+        DateTimeOffset dateTimeOffset = DateTimeOffset.FromUnixTimeSeconds(timestamp);
+        DateTime dateTime = dateTimeOffset.DateTime;
+
+        return dateTime.ToString("dd MMM yyyy");
     }
 
     public void ReturnToMain()

@@ -121,7 +121,7 @@ public class SimpleFirebaseManager : MonoBehaviour
                 //path to the datasnap shot playerstats/$uuid/<we want this value>
                 playerStats = JsonUtility.FromJson<SimplePlayerStats>(ds.Child(uuid).GetRawJsonValue());
 
-                Debug.Log("ds..." +ds.GetRawJsonValue());
+                Debug.Log("ds..." + ds.GetRawJsonValue());
                 Debug.Log("player stats value.. " + playerStats.SimplePlayerStatsToJson());
             }
         });

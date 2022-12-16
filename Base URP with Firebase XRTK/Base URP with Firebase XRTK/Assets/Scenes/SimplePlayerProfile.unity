@@ -746,7 +746,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: High Score
+  m_text: 234
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9103c3d5fda208468ca574a6447018c, type: 2}
   m_sharedMaterial: {fileID: -339647228727211294, guid: c9103c3d5fda208468ca574a6447018c,
@@ -1290,7 +1290,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Total Customers Left
+  m_text: 29
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9103c3d5fda208468ca574a6447018c, type: 2}
   m_sharedMaterial: {fileID: -339647228727211294, guid: c9103c3d5fda208468ca574a6447018c,
@@ -1766,7 +1766,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Total Time Spent
+  m_text: 1221 s
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9103c3d5fda208468ca574a6447018c, type: 2}
   m_sharedMaterial: {fileID: -339647228727211294, guid: c9103c3d5fda208468ca574a6447018c,
@@ -2091,7 +2091,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Total Customers Served
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9103c3d5fda208468ca574a6447018c, type: 2}
   m_sharedMaterial: {fileID: -339647228727211294, guid: c9103c3d5fda208468ca574a6447018c,
@@ -2415,7 +2415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Total Money Earned
+  m_text: 23
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9103c3d5fda208468ca574a6447018c, type: 2}
   m_sharedMaterial: {fileID: -339647228727211294, guid: c9103c3d5fda208468ca574a6447018c,

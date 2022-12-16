@@ -33,10 +33,6 @@ public class SimplePlayerStats : MonoBehaviour
 
     //simple constructor
 
-    public SimplePlayerStats()
-    {
-
-    }
     public SimplePlayerStats(string userName, int highScore, int xp = 0, int totalTimeSpent = 0, int totalMoneyEarned = 0, int totalCustomersLeft = 0, int totalCustomersServed = 0)
     {
         this.userName = userName;
