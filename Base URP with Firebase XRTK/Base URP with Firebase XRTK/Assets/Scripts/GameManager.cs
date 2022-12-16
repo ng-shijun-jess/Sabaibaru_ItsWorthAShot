@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
         score = 0;
         totalMoneyEarned = 0;
         UpdateScore(0);
+        UpdatePlayerStat(this.score, xpPerGame, this.timePerGame, this.totalMoneyEarned, this.totalCustomersLeft, this.totalCustomersServed);
 
     }
 

@@ -53,6 +53,7 @@ public class SimpleFirebaseManager : MonoBehaviour
                 //check if there is an entry created
                 if (playerStats.Exists)
                 {
+                    Debug.Log("player stats does exist");
                     //update player stats
                     //compare existing highscore and set new highscore
                     //add xp per game
@@ -75,6 +76,8 @@ public class SimpleFirebaseManager : MonoBehaviour
                 }
                 else
                 {
+
+                    Debug.Log("player stats does not exist");
                     //Create player stats
                     SimplePlayerStats sp = new SimplePlayerStats(displayName, score, xp, totalTimeSpent, totalMoneyEarned, totalCustomersLeft, totalCustomersServed);
 
@@ -109,7 +112,7 @@ public class SimpleFirebaseManager : MonoBehaviour
         Query q = dbPlayerStatsReference.Child(uuid).LimitToFirst(1);
         SimplePlayerStats playerStats = null;
 
-        await dbPlayerStatsReference.GetValueAsync().ContinueWithOnMainThread(task =>
+        await dbPlayerStatsReference.GetValueAsync().ContinueWithOnMainThread(task => //doesnt work
         {
             if (task.IsCanceled|| task.IsFaulted)
             {
@@ -117,7 +120,7 @@ public class SimpleFirebaseManager : MonoBehaviour
             }
             else if (task.IsCompleted)
             {
-                DataSnapshot ds = task.Result;//path -> playerstats/$uuid
+                DataSnapshot ds = task.Result;//path -> playerstats/$uuid 
                 //path to the datasnap shot playerstats/$uuid/<we want this value>
                 playerStats = JsonUtility.FromJson<SimplePlayerStats>(ds.Child(uuid).GetRawJsonValue());
 

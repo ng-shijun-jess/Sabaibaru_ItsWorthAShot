@@ -31,7 +31,7 @@ public class SimplePlayerStatsManager : MonoBehaviour
 
     public async void UpdatePlayerStats(string uuid)
     {
-        SimplePlayerStats playerStats = await fbMgr.GetPlayerStats(uuid);
+        SimplePlayerStats playerStats = await fbMgr.GetPlayerStats(uuid); //not working
         Debug.Log("player Stats...:  " + playerStats.SimplePlayerStatsToJson());
 
         playerHighScore.text = playerStats.highScore.ToString();
