@@ -7705,7 +7705,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfc2cf62ce595204c87b7c79cb17f40b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coasterGroup: {fileID: 1981855122}
+  coasters:
+  - {fileID: 1604600095}
+  - {fileID: 269336674}
+  - {fileID: 1868229959}
+  - {fileID: 254194235}
+  - {fileID: 1770120360}
 --- !u!1 &1178016633
 GameObject:
   m_ObjectHideFlags: 0
@@ -10799,7 +10804,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caaca5d6e4ee9514c88b20246c519cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coasterGroup: {fileID: 1981855122}
+  coasters:
+  - {fileID: 1604600095}
+  - {fileID: 269336674}
+  - {fileID: 1868229959}
+  - {fileID: 254194235}
+  - {fileID: 1770120360}
 --- !u!135 &1593556890
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12941,7 +12951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1981855123
 Transform:
   m_ObjectHideFlags: 0

@@ -4,13 +4,27 @@ using UnityEngine;
 
 public class LeftHandManager : MonoBehaviour
 {
-    public GameObject coasterGroup;
+    public GameObject[] coasters;
+
+    private MeshRenderer renderer;
+
+    private void Start()
+    {
+        for (int i = 0; i <= coasters.Length; i++)
+        {
+            renderer = coasters[i].GetComponent<MeshRenderer>();
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Drink")
         {
-            coasterGroup.SetActive(true);
+            for (int i = 0; i <= coasters.Length; i++)
+            {
+                renderer = coasters[i].GetComponent<MeshRenderer>();
+                renderer.enabled = true;
+            }
         }
     }
 
@@ -18,8 +32,11 @@ public class LeftHandManager : MonoBehaviour
     {
         if (other.gameObject.tag == "Drink")
         {
-            Debug.Log("Trigger");
-            coasterGroup.SetActive(true);
+            for (int i = 0; i <= coasters.Length; i++)
+            {
+                renderer = coasters[i].GetComponent<MeshRenderer>();
+                renderer.enabled = true;
+            }
         }
     }
 
@@ -27,12 +44,20 @@ public class LeftHandManager : MonoBehaviour
     {
         if (other.gameObject.tag == "Drink")
         {
-            coasterGroup.SetActive(false);
+            for (int i = 0; i <= coasters.Length; i++)
+            {
+                renderer = coasters[i].GetComponent<MeshRenderer>();
+                renderer.enabled = false;
+            }
         }
     }
 
     public void HideCoaster()
     {
-        coasterGroup.SetActive(false);
+        for (int i = 0; i <= coasters.Length; i++)
+        {
+            renderer = coasters[i].GetComponent<MeshRenderer>();
+            renderer.enabled = false;
+        }
     }
 }

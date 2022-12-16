@@ -7,12 +7,19 @@ public class CoasterSocket2 : MonoBehaviour
     public string currentDrink;
     public bool drinkSnapped;
 
+    // Check if WrongDrink coroutine is started
+    bool coroutineStarted;
+
     public GameObject customerPrefab;
     private AICustomer1 customerScript;
+
+    private Transform wrongDrinkCanvas;
 
     public void InitialiseCustomerScript()
     {
         Debug.Log("InitialiseCustomer");
+        Transform customerTransform = customerPrefab.transform;
+        wrongDrinkCanvas = customerTransform.Find("Text Canvas");
         customerScript = customerPrefab.GetComponent<AICustomer1>();
     }
     public void CheckDrink()
@@ -48,7 +55,7 @@ public class CoasterSocket2 : MonoBehaviour
             }
             else
             {
-                Destroy(other.gameObject);
+                StartCoroutine(WrongDrink(other.gameObject));
             }
         }
     }
@@ -57,19 +64,19 @@ public class CoasterSocket2 : MonoBehaviour
     {
         if (drinkSnapped)
         {
-            if (other.gameObject.name == "Milk" && currentDrink == "Milk")
+            if (other.gameObject.name == "Milk(Clone)" && currentDrink == "Milk(Clone)")
             {
                 customerScript.drinkGiven = true;
                 drinkSnapped = false;
                 Destroy(other.gameObject);
             }
-            else if (other.gameObject.name == "Beer" && currentDrink == "Beer")
+            else if (other.gameObject.name == "Beer(Clone)" && currentDrink == "Beer(Clone)")
             {
                 customerScript.drinkGiven = true;
                 drinkSnapped = false;
                 Destroy(other.gameObject);
             }
-            else if (other.gameObject.name == "Corba" && currentDrink == "Corba")
+            else if (other.gameObject.name == "Corba(Clone)" && currentDrink == "Corba(Clone)")
             {
                 customerScript.drinkGiven = true;
                 drinkSnapped = false;
@@ -77,8 +84,25 @@ public class CoasterSocket2 : MonoBehaviour
             }
             else
             {
-                Destroy(other.gameObject);
+                if (!coroutineStarted)
+                {
+                    Debug.Log("Coroutine");
+                    coroutineStarted = true;
+                    StartCoroutine(WrongDrink(other.gameObject));
+                }
             }
         }
+    }
+
+    IEnumerator WrongDrink(GameObject drink)
+    {
+        wrongDrinkCanvas.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        Debug.Log("OFF");
+        wrongDrinkCanvas.gameObject.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        Destroy(drink);
+        coroutineStarted = false;
+        yield return null;
     }
 }
