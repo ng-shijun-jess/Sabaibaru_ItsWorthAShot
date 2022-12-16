@@ -5677,6 +5677,7 @@ GameObject:
   - component: {fileID: 1262724680968816408}
   - component: {fileID: 3765116189373264060}
   - component: {fileID: 5683941173993111381}
+  - component: {fileID: 6633991346303594180}
   m_Layer: 0
   m_Name: Corba
   m_TagString: Drink
@@ -5849,6 +5850,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.011, y: 0.0382, z: 0.011}
   m_Center: {x: 0, y: 0.019, z: 0}
+--- !u!114 &6633991346303594180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7800633432068310586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835799f99333c09479383a28b58e7003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7957240111887503253
 GameObject:
   m_ObjectHideFlags: 0

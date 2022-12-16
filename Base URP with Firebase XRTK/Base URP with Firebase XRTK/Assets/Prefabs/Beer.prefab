@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3846709868888191870}
   - component: {fileID: -1917576380386219462}
   - component: {fileID: -7429235331503594051}
+  - component: {fileID: -8791108882342301023}
   m_Layer: 0
   m_Name: Beer
   m_TagString: Drink
@@ -241,5 +242,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f54828b80b082cc46864bb7a08bf98c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8791108882342301023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8450936148320079506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835799f99333c09479383a28b58e7003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

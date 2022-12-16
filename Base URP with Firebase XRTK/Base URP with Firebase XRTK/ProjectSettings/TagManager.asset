@@ -12,11 +12,12 @@ TagManager:
   - spawnSpot4
   - AICustomer
   - Drink
+  - Floor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
