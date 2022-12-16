@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoasterSocket0 : MonoBehaviour
+public class CoasterSocket3 : MonoBehaviour
 {
     public string currentDrink;
     public bool drinkSnapped;

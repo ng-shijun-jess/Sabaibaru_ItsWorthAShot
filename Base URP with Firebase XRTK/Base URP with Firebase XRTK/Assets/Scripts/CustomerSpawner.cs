@@ -48,6 +48,26 @@ public class CustomerSpawner : MonoBehaviour
             orderSlipManager.SetSocket0Customer();
         }
 
+        if (randomSpot == 1)
+        {
+            orderSlipManager.SetSocket1Customer();
+        }
+
+        if (randomSpot == 2)
+        {
+            orderSlipManager.SetSocket2Customer();
+        }
+
+        if (randomSpot == 3)
+        {
+            orderSlipManager.SetSocket3Customer();
+        }
+
+        if (randomSpot == 4)
+        {
+            orderSlipManager.SetSocket4Customer();
+        }
+
         StartCoroutine("SpawnCustomer");
     }
 
@@ -74,7 +94,6 @@ public class CustomerSpawner : MonoBehaviour
                 customer = Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
 
                 orderSlipManager.SetSocket0Customer();
-
             }
 
             else if (!usedSpots.Contains("1") && spotToAdd == "1")
@@ -89,6 +108,8 @@ public class CustomerSpawner : MonoBehaviour
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
                 customer = Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
+
+                orderSlipManager.SetSocket1Customer();
             }
 
             else if (!usedSpots.Contains("2") && spotToAdd == "2")
@@ -103,6 +124,8 @@ public class CustomerSpawner : MonoBehaviour
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
                 customer = Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
+
+                orderSlipManager.SetSocket2Customer();
             }
 
             else if (!usedSpots.Contains("3") && spotToAdd == "3")
@@ -117,6 +140,8 @@ public class CustomerSpawner : MonoBehaviour
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
                 customer = Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
+
+                orderSlipManager.SetSocket3Customer();
             }
 
             else if (!usedSpots.Contains("4") && spotToAdd == "4")
@@ -128,6 +153,8 @@ public class CustomerSpawner : MonoBehaviour
                 usedSpots.Add(spotToAdd);
                 // Instantiate the customer at the spot
                 customer = Instantiate(customerArray[randomCustomer], spawnSpots[randomSpot].transform.position, spawnSpots[randomSpot].transform.rotation);
+
+                orderSlipManager.SetSocket4Customer();
             }
             Debug.Log(spotToAdd);
         }
