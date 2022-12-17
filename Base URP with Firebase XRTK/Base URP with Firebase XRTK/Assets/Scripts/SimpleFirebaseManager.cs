@@ -71,7 +71,7 @@ public class SimpleFirebaseManager : MonoBehaviour
                     if (totalTimeWorked > sp.mostTimeWorked)
                     {
                         sp.mostTimeWorked = totalTimeWorked;
-                        UpdatePlayerLeaderBoardEntry(uuid, sp.highestMoneyEarned, sp.updatedOn);
+                        UpdatePlayerLeaderBoardEntry(uuid, sp.mostTimeWorked, sp.updatedOn);
                     }
 
 

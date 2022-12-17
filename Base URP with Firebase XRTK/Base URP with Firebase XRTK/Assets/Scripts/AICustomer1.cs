@@ -92,7 +92,7 @@ public class AICustomer1 : MonoBehaviour
             if (!addServedCustomer)
             {
                 addServedCustomer = true;
-                /// Add Served customer here                                   DATABASE
+                gameManagerScript.UpdateTotalCustomersServed(1);/// Add Served customer here                                   DATABASE
                 if (this.gameObject.name == "Customer1")
                 {
                     gameManagerScript.UpdateTotalMoneyEarned(firstMoneyRange);/// Add Money Earned Here                                   DATABASE

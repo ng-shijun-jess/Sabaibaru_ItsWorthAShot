@@ -13321,13 +13321,13 @@ MonoBehaviour:
   goTotalMoneyEarnedText: {fileID: 2144522757}
   goTotalCustomersServedText: {fileID: 2133124416}
   isGameActive: 0
+  time: 0
   restartButton: {fileID: 745082850}
   firebaseMgr: {fileID: 930359412}
   isPlayerStatUpdated: 0
-  xpPerGame: 5
-  timePerGame: 300
   pauseMenu: {fileID: 1776206586}
   gameOverMenu: {fileID: 1897210443}
+  startTime: 0
   playerLives: 3
 --- !u!4 &1818043734
 Transform:
