@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour
             if (playerLives == 0)
             {
                 GameOver(); ///need to link this
-                Debug.Log("Game is over");
             }
         }
     }

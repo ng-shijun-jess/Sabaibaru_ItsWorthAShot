@@ -77,7 +77,6 @@ public class SimpleFirebaseManager : MonoBehaviour
                 else
                 {
 
-                    Debug.Log("player stats does not exist");
                     //Create player stats
                     SimplePlayerStats sp = new SimplePlayerStats(displayName, score, xp, totalTimeSpent, totalMoneyEarned, totalCustomersLeft, totalCustomersServed);
 
