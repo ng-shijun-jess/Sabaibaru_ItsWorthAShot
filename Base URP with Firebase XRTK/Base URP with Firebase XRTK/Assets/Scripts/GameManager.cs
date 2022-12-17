@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI totalMoneyEarnedText;
     public TextMeshProUGUI gameOverText;
+
+    public TextMeshProUGUI goTotalMoneyEarnedText;
+    public TextMeshProUGUI goTotalCustomersServedText;
+
     public bool isGameActive;
     private int score;
     private int totalMoneyEarned;
@@ -74,9 +78,12 @@ public class GameManager : MonoBehaviour
         ///gameOverText.gameObject.SetActive(true);
         ///restartButton.gameObject.SetActive(true);
         gameOverMenu.SetActive(true);
+        goTotalMoneyEarnedText.text = "Money Earned: $" + totalMoneyEarned;
+        goTotalCustomersServedText.text = "Total Customer served: " + totalCustomersServed;
 
 
-    }
+
+}
 
     public void UpdatePlayerStat(int score, int xp, int totalTimeSpent, int totalMoneyEarned, int totalCustomersLeft, int totalCustomersServed)
     {
