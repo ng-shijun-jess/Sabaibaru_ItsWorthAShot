@@ -71,8 +71,10 @@ public class GameManager : MonoBehaviour
             UpdatePlayerStat(this.score, xpPerGame, this.timePerGame, this.totalMoneyEarned, this.totalCustomersLeft, this.totalCustomersServed);
         }
         isPlayerStatUpdated = true;
-        gameOverText.gameObject.SetActive(true);
-        restartButton.gameObject.SetActive(true);
+        ///gameOverText.gameObject.SetActive(true);
+        ///restartButton.gameObject.SetActive(true);
+        gameOverMenu.SetActive(true);
+
 
     }
 
