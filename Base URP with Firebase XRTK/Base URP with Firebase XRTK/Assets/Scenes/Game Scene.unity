@@ -10715,7 +10715,7 @@ RectTransform:
   m_Children:
   - {fileID: 308090196}
   m_Father: {fileID: 1897210447}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13223,6 +13223,8 @@ MonoBehaviour:
   scoreText: {fileID: 0}
   totalMoneyEarnedText: {fileID: 0}
   gameOverText: {fileID: 0}
+  goTotalMoneyEarnedText: {fileID: 0}
+  goTotalCustomersServedText: {fileID: 0}
   isGameActive: 0
   restartButton: {fileID: 0}
   firebaseMgr: {fileID: 0}
@@ -13277,7 +13279,7 @@ GameObject:
   - component: {fileID: 1842794336}
   - component: {fileID: 1842794335}
   m_Layer: 5
-  m_Name: Time Worked
+  m_Name: GO Time Worked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13296,7 +13298,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1897210447}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13601,10 +13603,10 @@ RectTransform:
   - {fileID: 1157591023}
   - {fileID: 1457811636}
   - {fileID: 745082849}
+  - {fileID: 1495888926}
   - {fileID: 2144522756}
   - {fileID: 2133124415}
   - {fileID: 1842794334}
-  - {fileID: 1495888926}
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15099,7 +15101,7 @@ GameObject:
   - component: {fileID: 2133124417}
   - component: {fileID: 2133124416}
   m_Layer: 5
-  m_Name: Customers Served
+  m_Name: GO Customers Served
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15118,7 +15120,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1897210447}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15235,7 +15237,7 @@ GameObject:
   - component: {fileID: 2144522758}
   - component: {fileID: 2144522757}
   m_Layer: 5
-  m_Name: Money Earned
+  m_Name: GO Money Earned
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15254,7 +15256,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1897210447}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
