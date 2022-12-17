@@ -8,13 +8,16 @@ using UnityEngine.SceneManagement;
 
 public class SimplePlayerStatsManager : MonoBehaviour
 {
-
-    public TextMeshProUGUI playerHighScore;
-    public TextMeshProUGUI playerTotalMoneyEarned;
-    public TextMeshProUGUI playerTotalTimeSpent;
-    public TextMeshProUGUI playerTotalCustomersServed;
-    public TextMeshProUGUI playerTotalCustomersLeft;
     public TextMeshProUGUI playerName;
+    public TextMeshProUGUI customersHit;
+    public TextMeshProUGUI customersLost;
+    public TextMeshProUGUI customersChasedAway;
+    public TextMeshProUGUI highestMoneyEarned;
+    public TextMeshProUGUI totalMoneyEarned;
+    public TextMeshProUGUI mostTimeWorked;
+    public TextMeshProUGUI totalTimeWorked;
+    public TextMeshProUGUI customersServed;
+
 
     public SimpleFirebaseManager fbMgr;
     public SimpleAuthManager auth;
@@ -34,11 +37,13 @@ public class SimplePlayerStatsManager : MonoBehaviour
         SimplePlayerStats playerStats = await fbMgr.GetPlayerStats(uuid); //not working
         Debug.Log("player Stats...:  " + playerStats.SimplePlayerStatsToJson());
 
-        playerHighScore.text = playerStats.highScore.ToString();
-        playerTotalMoneyEarned.text = "$ " + playerStats.totalMoneyEarned;
-        playerTotalTimeSpent.text = playerStats.totalTimeSpent + " secs";
-        playerTotalCustomersServed.text = playerStats.totalCustomersServed.ToString();
-        playerTotalCustomersLeft.text = playerStats.totalCustomersLeft.ToString();
+        customersHit.text = customersHit.ToString();
+        customersLost.text = customersLost.ToString();
+        customersChasedAway.text = customersChasedAway.ToString();
+        highestMoneyEarned.text = "$" + highestMoneyEarned;
+        totalMoneyEarned.text = "$" + totalMoneyEarned;
+        mostTimeWorked.text = mostTimeWorked.ToString();
+        totalTimeWorked.text = totalTimeWorked.ToString();
 
         playerName.text = auth.GetCurrentUserDisplayName();
     }

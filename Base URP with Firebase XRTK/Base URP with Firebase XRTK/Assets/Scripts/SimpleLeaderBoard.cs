@@ -7,20 +7,21 @@ public class SimpleLeaderBoard
 
     /*
     Key:uuid
-userName
-highScore
-xp
-totalTimeSpent
-totalDrinkServed
-totalMoneyEarned
-totalCustomersLeft
-totalCustomersServed
-updatedOn
-createdOn
+    userName;
+    customersHit;
+    customersLost;
+    customersChasedAway;
+    highestMoneyEarned;
+    totalMoneyEarned;
+    mostTimeWorked;
+    totalTimeWorked;
+    customersServed;
+    updatedOn;
+    createdOn;
  */
 
     public string userName;
-    public int highScore;
+    public int highestMoneyEarned;
     public long updatedOn;
 
     //simpleLeaderBoard
@@ -29,10 +30,10 @@ createdOn
 
     }
     //constructor with parameters
-    public SimpleLeaderBoard(string uesrName, int highScore)
+    public SimpleLeaderBoard(string uesrName, int highestMoneyEarned)
     {
         this.userName = uesrName;
-        this.highScore = highScore;
+        this.highestMoneyEarned = highestMoneyEarned;
         this.updatedOn = GetTimeUnix();
 
        

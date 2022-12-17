@@ -21,10 +21,15 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI goTotalCustomersServedText;
 
     public bool isGameActive;
-    private int score;
+    public int score;
+    private int customersHit;
+    private int customersLost;
+    private int customersChasedAway;
+    private int highestMoneyEarned;
     private int totalMoneyEarned;
-    private int totalCustomersLeft;
-    private int totalCustomersServed;
+    private int mostTimeWorked;
+    private int totalTimeWorked;
+    private int customersServed;
     public Button restartButton;
 
     public SimpleFirebaseManager firebaseMgr;
@@ -56,8 +61,8 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(int scoreToAdd)
     {
-        ///score += scoreToAdd;
-        ///scoreText.text = "Score: " + score;
+        score += scoreToAdd;
+        //scoreText.text = "Score: " + score;
     }
     public void UpdateTotalMoneyEarned(int moneyToAdd)
     {
@@ -72,36 +77,34 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         if(!isPlayerStatUpdated)
         {
-            UpdatePlayerStat(this.score, xpPerGame, this.timePerGame, this.totalMoneyEarned, this.totalCustomersLeft, this.totalCustomersServed); ///need to link this
+            UpdatePlayerStat(this.customersHit, this.customersLost, this.customersChasedAway, this.highestMoneyEarned, this.totalMoneyEarned, this.mostTimeWorked, this.totalTimeWorked, this.customersServed); //need to update this
             Debug.Log("playerStats is being updated");
         }
         isPlayerStatUpdated = true;
-        ///gameOverText.gameObject.SetActive(true);
-        ///restartButton.gameObject.SetActive(true);
         gameOverMenu.SetActive(true);
 
         //updating the text in the Game Over Menu
 
         goTotalMoneyEarnedText.text = "Money Earned: $" + totalMoneyEarned;
-        goTotalCustomersServedText.text = "Total Customer served: " + totalCustomersServed;
+        goTotalCustomersServedText.text = "Total Customer served: " + customersServed;
 
 
 
 }
-
-    public void UpdatePlayerStat(int score, int xp, int totalTimeSpent, int totalMoneyEarned, int totalCustomersLeft, int totalCustomersServed)
+    //update player stats 
+    public void UpdatePlayerStat(int customersHit, int customersLost, int customersChasedAway, int highestMoneyEarned, int totalMoneyEarned, int mostTimeWorked, int totalTimeWorked, int customersServed)
     {
-        firebaseMgr.UpdatePlayerStats(auth.GetCurrentUser().UserId, score, xp, totalTimeSpent, totalMoneyEarned, totalCustomersLeft, totalCustomersServed, auth.GetCurrentUserDisplayName()); ///need to link this
+        firebaseMgr.UpdatePlayerStats(auth.GetCurrentUser().UserId, customersHit, customersLost, customersChasedAway, highestMoneyEarned, totalMoneyEarned,  mostTimeWorked, totalTimeWorked, customersServed, auth.GetCurrentUserDisplayName()); ///need to link this
     }
     private void Start()
     {
         isGameActive = true;
         isPlayerStatUpdated = false;
-        ///score = 0;
-        ///totalMoneyEarned = 0;
-        ///UpdateScore(0);
+        totalMoneyEarned = 0;
+        UpdateTotalMoneyEarned(0);
 
-       
+
+
 
     }
 

@@ -98,7 +98,6 @@ public class AICustomer1 : MonoBehaviour
                     /// Add Money Earned Here                                   DATABASE
                 }
             }
-
             Debug.Log("drinkGiven");
             aiCanvas.SetActive(false);
             // Play walking animation

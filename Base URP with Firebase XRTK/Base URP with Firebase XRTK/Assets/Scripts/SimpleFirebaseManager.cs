@@ -28,14 +28,16 @@ public class SimpleFirebaseManager : MonoBehaviour
     /// create a new entry only if first time playing, update whem there's exisitng entries
     /// </summary>
     /// <param name="uuid"></param>
-    /// <param name="score"></param>
-    /// <param name="xp"></param>
-    /// <param name="totalTimeSpent"></param>
-    /// <param name="totalMoneyEarned"></param>
-    /// <param name="totalCustomersLeft"></param>
-    /// <param name="totalCustomersServed"></param>
+    /// <param name="customersHit"></param>
+    /// <param name="customersLost"></param>
+    /// <param name="customersChasedAway"></param>
+    /// <param name="highestMoneyEarned"></param>
+    /// /// <param name="totalMoneyEarned"></param>
+    /// /// <param name="mostTimeWorked"></param>
+    /// /// <param name="totalTimeWorked"></param>
+    /// /// <param name="customersServed"></param>
     /// <param name="displayName"></param>
-    public void UpdatePlayerStats(string uuid, int score, int xp, int totalTimeSpent, int totalMoneyEarned , int totalCustomersLeft , int totalCustomersServed, string displayName)
+    public void UpdatePlayerStats(string uuid, int customersHit, int customersLost, int customersChasedAway, int highestMoneyEarned, int totalMoneyEarned, int mostTimeWorked, int totalTimeWorked, int customersServed, string displayName)
     {
         Query playerQuery = dbPlayerStatsReference.Child(uuid);
 
@@ -60,14 +62,13 @@ public class SimpleFirebaseManager : MonoBehaviour
                     //add time spent
 
                     SimplePlayerStats sp = JsonUtility.FromJson<SimplePlayerStats>(playerStats.GetRawJsonValue());
-                    sp.xp += xp;
-                    sp.totalTimeSpent += totalTimeSpent;
+                    //sp.totalTimeSpent += totalTimeSpent;
                     sp.updatedOn += sp.GetTimeUnix();
                  
-                    if (score > sp.highScore)
+                    if (totalMoneyEarned > sp.highestMoneyEarned)
                     {
-                        sp.highScore = score;
-                        UpdatePlayerLeaderBoardEntry(uuid, sp.highScore, sp.updatedOn);
+                        sp.highestMoneyEarned = totalMoneyEarned;
+                        UpdatePlayerLeaderBoardEntry(uuid, sp.highestMoneyEarned, sp.updatedOn);
                     }
 
 
@@ -78,9 +79,9 @@ public class SimpleFirebaseManager : MonoBehaviour
                 {
 
                     //Create player stats
-                    SimplePlayerStats sp = new SimplePlayerStats(displayName, score, xp, totalTimeSpent, totalMoneyEarned, totalCustomersLeft, totalCustomersServed);
+                    SimplePlayerStats sp = new SimplePlayerStats(displayName,customersHit, customersLost, customersChasedAway, highestMoneyEarned, totalMoneyEarned, mostTimeWorked, totalTimeWorked, customersServed);
 
-                    SimpleLeaderBoard lb = new SimpleLeaderBoard(displayName, score);
+                    SimpleLeaderBoard lb = new SimpleLeaderBoard(displayName, totalMoneyEarned);
 
                     dbPlayerStatsReference.Child(uuid).SetRawJsonValueAsync(sp.SimplePlayerStatsToJson());
                     dbLeaderboardsReference.Child(uuid).SetRawJsonValueAsync(lb.SimpleLeaderBoardToJson());
@@ -89,13 +90,13 @@ public class SimpleFirebaseManager : MonoBehaviour
         });
 
     }
-    public void UpdatePlayerLeaderBoardEntry(string uuid, int highScore, long updatedOn)
+    public void UpdatePlayerLeaderBoardEntry(string uuid, int highestMoneyEarned, long updatedOn)
     {
 
         //path: leaderboards/$uuid/highScore
         //path: leaderboards/$uuid/updatedOn
 
-        dbLeaderboardsReference.Child(uuid).Child("highsScore").SetValueAsync(highScore);
+        dbLeaderboardsReference.Child(uuid).Child("highestMoneyEarned").SetValueAsync(highestMoneyEarned);
         dbLeaderboardsReference.Child(uuid).Child("updatedOn").SetValueAsync(updatedOn);
     }
 
