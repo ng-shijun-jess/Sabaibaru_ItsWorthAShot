@@ -63,7 +63,7 @@ public class AICustomer1 : MonoBehaviour
         // Find the AI's destination with object tag.
         aiDestination = GameObject.FindGameObjectWithTag("AIDestination");
         // Randomise total waiting time
-        waitTime = Random.Range(15, 25);
+        waitTime = Random.Range(25, 35);
         currentTime = waitTime;
     }
 
