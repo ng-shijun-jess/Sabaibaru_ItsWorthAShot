@@ -3,12 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - AIDestination
+  - spawnSpot0
+  - spawnSpot1
+  - spawnSpot2
+  - spawnSpot3
+  - spawnSpot4
+  - AICustomer
+  - Drink
+  - Floor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
