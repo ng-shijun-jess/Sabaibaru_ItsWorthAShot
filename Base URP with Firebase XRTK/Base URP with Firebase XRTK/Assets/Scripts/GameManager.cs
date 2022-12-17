@@ -21,70 +21,109 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI goTotalCustomersServedText;
 
     public bool isGameActive;
-    public int score;
+
+
+    //all the data needed for the update player stats
     private int customersHit;
     private int customersLost;
     private int customersChasedAway;
-    private int highestMoneyEarned;
     private int totalMoneyEarned;
-    private int mostTimeWorked;
     private int totalTimeWorked;
     private int customersServed;
+
+    public float time;
+
     public Button restartButton;
 
     public SimpleFirebaseManager firebaseMgr;
     public bool isPlayerStatUpdated;
-    public int xpPerGame = 5;
-    public int timePerGame = 300;
 
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
 
+    public float startTime;
+
     // Defining Lives Int
     public int playerLives = 3;
+
+    private void Start()
+    { 
+        isGameActive = true;
+        isPlayerStatUpdated = false;
+        totalMoneyEarned = 0;
+        UpdateTotalMoneyEarned(0);
+        startTime = Time.time;
+    }
 
     private void Update()
     {
         if (isGameActive)
         {
+            Time.timeScale = 1;
+            time = Time.time - startTime;
+
+            //When player live hits to 0, it is game over
             if (playerLives == 0)
             {
-                GameOver(); ///need to link this
+                GameOver(); 
+
             }
         }
     }
 
+    //refreshes the scene
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void UpdateScore(int scoreToAdd)
+    //update when customer got hit
+    public void UpdateCustomersHit(int customersHitToAdd)
     {
-        score += scoreToAdd;
-        //scoreText.text = "Score: " + score;
+        customersHit += customersHitToAdd;
     }
+    //update when customer is lost
+    public void UpdateCustomersLost(int customersLostToAdd)
+    {
+        customersLost += customersLostToAdd;
+    }
+
+    //update when customers are being chased away
+    public void UpdateCustomersChasedAway(int customersChasedAwayToAdd)
+    {
+        customersChasedAway += customersChasedAwayToAdd;
+    }
+
+    //update when the money is being earned
     public void UpdateTotalMoneyEarned(int moneyToAdd)
     {
         totalMoneyEarned += moneyToAdd;
         totalMoneyEarnedText.text = "Total Money Earned: " + totalMoneyEarned;
     }
 
+    //update when customers are served
+    public void UpdateTotalCustomersServed(int totalCustomersServedToAdd)
+    {
+        customersServed += totalCustomersServedToAdd;
+    }
+
+
+    //When the game is over
     public void GameOver()
     {
-
+        totalTimeWorked = (int)Math.Round(time);
         isGameActive = false;
         Time.timeScale = 0;
+        //if not updated, the player stats will be updated
         if(!isPlayerStatUpdated)
         {
-            UpdatePlayerStat(this.customersHit, this.customersLost, this.customersChasedAway, this.highestMoneyEarned, this.totalMoneyEarned, this.mostTimeWorked, this.totalTimeWorked, this.customersServed); //need to update this
+            UpdatePlayerStat(this.customersHit, this.customersLost, this.customersChasedAway, this.totalMoneyEarned, this.totalTimeWorked, this.customersServed); //need to update this
             Debug.Log("playerStats is being updated");
         }
         isPlayerStatUpdated = true;
         gameOverMenu.SetActive(true);
 
         //updating the text in the Game Over Menu
-
         goTotalMoneyEarnedText.text = "Money Earned: $" + totalMoneyEarned;
         goTotalCustomersServedText.text = "Total Customer served: " + customersServed;
 
@@ -92,28 +131,18 @@ public class GameManager : MonoBehaviour
 
 }
     //update player stats 
-    public void UpdatePlayerStat(int customersHit, int customersLost, int customersChasedAway, int highestMoneyEarned, int totalMoneyEarned, int mostTimeWorked, int totalTimeWorked, int customersServed)
+    public void UpdatePlayerStat(int customersHit, int customersLost, int customersChasedAway, int totalMoneyEarned, int totalTimeWorked, int customersServed)
     {
-        firebaseMgr.UpdatePlayerStats(auth.GetCurrentUser().UserId, customersHit, customersLost, customersChasedAway, highestMoneyEarned, totalMoneyEarned,  mostTimeWorked, totalTimeWorked, customersServed, auth.GetCurrentUserDisplayName()); ///need to link this
-    }
-    private void Start()
-    {
-        isGameActive = true;
-        isPlayerStatUpdated = false;
-        totalMoneyEarned = 0;
-        UpdateTotalMoneyEarned(0);
-
-
-
-
+        firebaseMgr.UpdatePlayerStats(auth.GetCurrentUser().UserId, customersHit, customersLost, customersChasedAway, totalMoneyEarned, totalTimeWorked, customersServed, auth.GetCurrentUserDisplayName()); ///need to link this
     }
 
+    //Goes to Main Menu
     public void MainMenu()
     {
         SceneManager.LoadScene(2);
 
     }
-
+    //Stops time
     public void Pause()
     {
         if (isGameActive)

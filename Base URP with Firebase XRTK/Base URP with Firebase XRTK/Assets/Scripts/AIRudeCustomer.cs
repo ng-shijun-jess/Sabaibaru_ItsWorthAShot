@@ -62,7 +62,9 @@ public class AIRudeCustomer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Drink")
         {
-            /// Add Customers hit here                      DATABASE
+            gameManagerScript.UpdateCustomersHit(1);/// Add Customers hit here                      DATABASE
+            gameManagerScript.UpdateCustomersChasedAway(1);//update customer chased
+
             gotHit = true;
             rudeCustomerRemarks.SetActive(false);
             rudeAnimator.SetBool("StartWalk", true);

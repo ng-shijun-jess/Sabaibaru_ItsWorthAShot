@@ -30,9 +30,9 @@ public class SimpleLeaderBoard
 
     }
     //constructor with parameters
-    public SimpleLeaderBoard(string uesrName, int highestMoneyEarned)
+    public SimpleLeaderBoard(string userName, int highestMoneyEarned)
     {
-        this.userName = uesrName;
+        this.userName = userName;
         this.highestMoneyEarned = highestMoneyEarned;
         this.updatedOn = GetTimeUnix();
 

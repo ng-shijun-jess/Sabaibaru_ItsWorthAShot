@@ -31,13 +31,11 @@ public class SimpleFirebaseManager : MonoBehaviour
     /// <param name="customersHit"></param>
     /// <param name="customersLost"></param>
     /// <param name="customersChasedAway"></param>
-    /// <param name="highestMoneyEarned"></param>
     /// /// <param name="totalMoneyEarned"></param>
-    /// /// <param name="mostTimeWorked"></param>
     /// /// <param name="totalTimeWorked"></param>
     /// /// <param name="customersServed"></param>
     /// <param name="displayName"></param>
-    public void UpdatePlayerStats(string uuid, int customersHit, int customersLost, int customersChasedAway, int highestMoneyEarned, int totalMoneyEarned, int mostTimeWorked, int totalTimeWorked, int customersServed, string displayName)
+    public void UpdatePlayerStats(string uuid, int customersHit, int customersLost, int customersChasedAway, int totalMoneyEarned, int totalTimeWorked, int customersServed, string displayName)
     {
         Query playerQuery = dbPlayerStatsReference.Child(uuid);
 
@@ -70,6 +68,11 @@ public class SimpleFirebaseManager : MonoBehaviour
                         sp.highestMoneyEarned = totalMoneyEarned;
                         UpdatePlayerLeaderBoardEntry(uuid, sp.highestMoneyEarned, sp.updatedOn);
                     }
+                    if (totalTimeWorked > sp.mostTimeWorked)
+                    {
+                        sp.mostTimeWorked = totalTimeWorked;
+                        UpdatePlayerLeaderBoardEntry(uuid, sp.highestMoneyEarned, sp.updatedOn);
+                    }
 
 
                     //path: playerStats/$uuid
@@ -79,7 +82,7 @@ public class SimpleFirebaseManager : MonoBehaviour
                 {
 
                     //Create player stats
-                    SimplePlayerStats sp = new SimplePlayerStats(displayName,customersHit, customersLost, customersChasedAway, highestMoneyEarned, totalMoneyEarned, mostTimeWorked, totalTimeWorked, customersServed);
+                    SimplePlayerStats sp = new SimplePlayerStats(displayName,customersHit, customersLost, customersChasedAway, totalMoneyEarned, totalTimeWorked, customersServed);
 
                     SimpleLeaderBoard lb = new SimpleLeaderBoard(displayName, totalMoneyEarned);
 

@@ -13,6 +13,12 @@ public class AICustomer1 : MonoBehaviour
 
     // Total Time before customer leaves
     float waitTime;
+
+    //money range for customer 1 to 3
+    int firstMoneyRange = Random.Range(30, 65);
+    int secondMoneyRange = Random.Range(20, 45);
+    int thirdMoneyRange = Random.Range(40, 70);
+
     // Current time left
     float currentTime;
     float lerpSpeed;
@@ -56,6 +62,9 @@ public class AICustomer1 : MonoBehaviour
         gameManager = GameObject.Find("GameManager");
         // Find GameManager Script on GameManager GameObject
         gameManagerScript = gameManager.GetComponent<GameManager>();
+
+        //customer 1 money range
+        
     }
 
     void Start()
@@ -65,6 +74,7 @@ public class AICustomer1 : MonoBehaviour
         // Randomise total waiting time
         waitTime = Random.Range(25, 35);
         currentTime = waitTime;
+
     }
 
     // Update is called once per frame
@@ -85,17 +95,17 @@ public class AICustomer1 : MonoBehaviour
                 /// Add Served customer here                                   DATABASE
                 if (this.gameObject.name == "Customer1")
                 {
-                    /// Add Money Earned Here                                   DATABASE
+                    gameManagerScript.UpdateTotalMoneyEarned(firstMoneyRange);/// Add Money Earned Here                                   DATABASE
                 }
 
                 if (this.gameObject.name == "Customer2")
                 {
-                    /// Add Money Earned Here                                   DATABASE
+                    gameManagerScript.UpdateTotalMoneyEarned(secondMoneyRange);/// Add Money Earned Here                                   DATABASE
                 }
 
                 if (this.gameObject.name == "Customer3")
                 {
-                    /// Add Money Earned Here                                   DATABASE
+                    gameManagerScript.UpdateTotalMoneyEarned(thirdMoneyRange);/// Add Money Earned Here                                   DATABASE
                 }
             }
             Debug.Log("drinkGiven");
@@ -123,7 +133,8 @@ public class AICustomer1 : MonoBehaviour
                 // Deduct life from GameManager playerLives
                 gameManagerScript.playerLives--;
                 addLostCustomer = true;
-                /// Add lost customer here                                   DATABASE
+
+                gameManagerScript.UpdateCustomersLost(1); /// Add lost customer here                                   DATABASE
             }
             aiCanvas.SetActive(false);
             // Play walking animation
@@ -163,7 +174,7 @@ public class AICustomer1 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Drink")
         {
-            /// Add Customers hit here                      DATABASE
+            gameManagerScript.UpdateCustomersHit(1); /// Add Customers hit here                      DATABASE
         }
     }
 }

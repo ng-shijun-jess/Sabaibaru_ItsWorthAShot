@@ -42,8 +42,8 @@ public class SimplePlayerStatsManager : MonoBehaviour
         customersChasedAway.text = customersChasedAway.ToString();
         highestMoneyEarned.text = "$" + highestMoneyEarned;
         totalMoneyEarned.text = "$" + totalMoneyEarned;
-        mostTimeWorked.text = mostTimeWorked.ToString();
-        totalTimeWorked.text = totalTimeWorked.ToString();
+        mostTimeWorked.text = mostTimeWorked + "s";
+        totalTimeWorked.text = totalTimeWorked + "s";
 
         playerName.text = auth.GetCurrentUserDisplayName();
     }
