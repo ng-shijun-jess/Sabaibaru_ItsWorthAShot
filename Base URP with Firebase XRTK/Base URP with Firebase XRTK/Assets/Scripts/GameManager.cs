@@ -32,6 +32,19 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
 
+    // Defining Lives Int
+    public int playerLives = 3;
+
+    private void Update()
+    {
+        if (isGameActive)
+        {
+            if (playerLives == 0)
+            {
+                GameOver();
+            }
+        }
+    }
 
     public void RestartGame()
     {

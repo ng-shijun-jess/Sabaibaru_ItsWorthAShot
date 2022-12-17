@@ -37,6 +37,11 @@ public class AICustomer1 : MonoBehaviour
     // Check if Served customer has been added to database
     bool addServedCustomer;
 
+    // Reference GameManager GameObject
+    private GameObject gameManager;
+    // Reference GameManager Script
+    private GameManager gameManagerScript;
+
     private void Awake()
     {
         // Look for Customer Spawner gameObject
@@ -47,6 +52,10 @@ public class AICustomer1 : MonoBehaviour
         customerAI = GetComponent<NavMeshAgent>();
         // Find Animator component
         customerAnimator = GetComponent<Animator>();
+        // Look for GameManager GameObject
+        gameManager = GameObject.Find("GameManager");
+        // Find GameManager Script on GameManager GameObject
+        gameManagerScript = gameManager.GetComponent<GameManager>();
     }
 
     void Start()
@@ -112,6 +121,8 @@ public class AICustomer1 : MonoBehaviour
         {
             if (!addLostCustomer)
             {
+                // Deduct life from GameManager playerLives
+                gameManagerScript.playerLives--;
                 addLostCustomer = true;
                 /// Add lost customer here                                   DATABASE
             }

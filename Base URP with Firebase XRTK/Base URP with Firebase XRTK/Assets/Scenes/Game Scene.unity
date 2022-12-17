@@ -12082,6 +12082,7 @@ MonoBehaviour:
   timePerGame: 300
   pauseMenu: {fileID: 1776206586}
   gameOverMenu: {fileID: 1897210443}
+  playerLives: 3
 --- !u!4 &1818043734
 Transform:
   m_ObjectHideFlags: 0

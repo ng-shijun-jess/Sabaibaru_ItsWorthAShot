@@ -10,7 +10,7 @@ public class RightHandManager : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i <= coasters.Length; i++)
+        for (int i = 0; i < coasters.Length; i++)
         {
             renderer = coasters[i].GetComponent<MeshRenderer>();
         }
@@ -20,7 +20,7 @@ public class RightHandManager : MonoBehaviour
     {
         if (other.gameObject.tag == "Drink")
         {
-            for (int i = 0; i <= coasters.Length; i++)
+            for (int i = 0; i < coasters.Length; i++)
             {
                 renderer = coasters[i].GetComponent<MeshRenderer>();
                 renderer.enabled = true;
@@ -32,7 +32,7 @@ public class RightHandManager : MonoBehaviour
     {
         if (other.gameObject.tag == "Drink")
         {
-            for (int i = 0; i <= coasters.Length; i++)
+            for (int i = 0; i < coasters.Length; i++)
             {
                 renderer = coasters[i].GetComponent<MeshRenderer>();
                 renderer.enabled = true;
@@ -44,7 +44,7 @@ public class RightHandManager : MonoBehaviour
     {
         if (other.gameObject.tag == "Drink")
         {
-            for (int i = 0; i <= coasters.Length; i++)
+            for (int i = 0; i < coasters.Length; i++)
             {
                 renderer = coasters[i].GetComponent<MeshRenderer>();
                 renderer.enabled = false;
@@ -54,7 +54,7 @@ public class RightHandManager : MonoBehaviour
 
     public void HideCoaster()
     {
-        for (int i = 0; i <= coasters.Length; i++)
+        for (int i = 0; i < coasters.Length; i++)
         {
             renderer = coasters[i].GetComponent<MeshRenderer>();
             renderer.enabled = false;
