@@ -9,10 +9,8 @@ public class AIRudeCustomer : MonoBehaviour
 {
     public GameObject rudeCustomerRemarks;
 
+    //Check if RudeCustomer got hit
     bool gotHit;
-
-    // Check if Customer is given correct drink
-    public bool drinkGiven;
 
     // Destination of customer when leaving
     private GameObject aiDestination;
@@ -48,6 +46,7 @@ public class AIRudeCustomer : MonoBehaviour
 
     void Start()
     {
+        rudeCustomerRemarks.SetActive(true);
         // Find the AI's destination with object tag.
         aiDestination = GameObject.FindGameObjectWithTag("AIDestination");
     }
@@ -55,9 +54,6 @@ public class AIRudeCustomer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rudeCustomerRemarks.SetActive(true);
-
-
 
     }
 
@@ -68,6 +64,7 @@ public class AIRudeCustomer : MonoBehaviour
         {
             /// Add Customers hit here                      DATABASE
             gotHit = true;
+            rudeCustomerRemarks.SetActive(false);
             rudeAnimator.SetBool("StartWalk", true);
             // Set customerAI's destination to the leaving destination
             rudeAI.destination = aiDestination.transform.position;
