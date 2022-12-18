@@ -45,6 +45,17 @@ public class GameManager : MonoBehaviour
 
     // Defining Lives Int
     public int playerLives = 3;
+    // Changing Lives Counter
+    public TextMeshProUGUI livesCounter;
+
+    // Updating time worked
+    public TextMeshProUGUI timeTracker;
+
+    // Updating Customers served on board
+    public TextMeshProUGUI customersServedBoard;
+
+    // Updating Money Earned on Board
+    public TextMeshProUGUI moneyEarnedBoard;
 
     private void Start()
     { 
@@ -63,7 +74,15 @@ public class GameManager : MonoBehaviour
         if (isGameActive)
         {
             Time.timeScale = 1;
-            time = Time.time - startTime;
+            time += 1 * Time.deltaTime;
+
+            if (playerLives != 0)
+            {
+                livesCounter.text = "Lives Left: " + playerLives.ToString();
+                timeTracker.text = "Time Worked: " + time.ToString("0");
+                customersServedBoard.text = "Customers Served: " + customersServed.ToString();
+                moneyEarnedBoard.text = "Money Earned: " + totalMoneyEarned.ToString();
+            }
 
             //When player live hits to 0, it is game over
             if (playerLives == 0)
@@ -149,7 +168,7 @@ public class GameManager : MonoBehaviour
     //Goes to Main Menu
     public void MainMenu()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
 
     }
     //Stops time
