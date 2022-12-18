@@ -15,9 +15,9 @@ public class AICustomer1 : MonoBehaviour
     float waitTime;
 
     //money range for customer 1 to 3
-    int firstMoneyRange = Random.Range(30, 65);
-    int secondMoneyRange = Random.Range(20, 45);
-    int thirdMoneyRange = Random.Range(40, 70);
+    float firstMoneyRangeFloat;
+    float secondMoneyRangeFloat;
+    float thirdMoneyRangeFloat;
 
     // Current time left
     float currentTime;
@@ -95,17 +95,26 @@ public class AICustomer1 : MonoBehaviour
                 gameManagerScript.UpdateTotalCustomersServed(1);/// Add Served customer here                                   DATABASE
                 if (this.gameObject.name == "Customer1")
                 {
-                    gameManagerScript.UpdateTotalMoneyEarned(firstMoneyRange);/// Add Money Earned Here                                   DATABASE
+                    firstMoneyRangeFloat = Random.Range(30, 60);
+                    int firstMoneyRangeInt = (int)firstMoneyRangeFloat;
+                    gameManagerScript.UpdateTotalMoneyEarned(firstMoneyRangeInt);/// Add Money Earned Here                                   DATABASE
+                    Debug.Log("money Earned");
                 }
 
                 if (this.gameObject.name == "Customer2")
                 {
-                    gameManagerScript.UpdateTotalMoneyEarned(secondMoneyRange);/// Add Money Earned Here                                   DATABASE
+                    secondMoneyRangeFloat = Random.Range(30, 60);
+                    int secondMoneyRangeInt = (int)secondMoneyRangeFloat;
+                    gameManagerScript.UpdateTotalMoneyEarned(secondMoneyRangeInt);/// Add Money Earned Here                                   DATABASE
+                    Debug.Log("money Earned");
                 }
 
                 if (this.gameObject.name == "Customer3")
                 {
-                    gameManagerScript.UpdateTotalMoneyEarned(thirdMoneyRange);/// Add Money Earned Here                                   DATABASE
+                    thirdMoneyRangeFloat = Random.Range(30, 60);
+                    int thirdMoneyRangeInt = (int)thirdMoneyRangeFloat;
+                    gameManagerScript.UpdateTotalMoneyEarned(thirdMoneyRangeInt);/// Add Money Earned Here                                   DATABASE
+                    Debug.Log("money Earned");
                 }
             }
             Debug.Log("drinkGiven");

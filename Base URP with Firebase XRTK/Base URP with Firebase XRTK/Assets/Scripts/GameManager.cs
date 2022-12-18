@@ -50,8 +50,11 @@ public class GameManager : MonoBehaviour
     { 
         isGameActive = true;
         isPlayerStatUpdated = false;
-        totalMoneyEarned = 0;
+        UpdateCustomersHit(0);
+        UpdateCustomersLost(0);
+        UpdateCustomersChasedAway(0);
         UpdateTotalMoneyEarned(0);
+        UpdateTotalCustomersServed(0);
         startTime = Time.time;
     }
 
