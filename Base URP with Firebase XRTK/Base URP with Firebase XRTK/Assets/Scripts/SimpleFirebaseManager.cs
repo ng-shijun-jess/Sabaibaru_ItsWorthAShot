@@ -103,6 +103,44 @@ public class SimpleFirebaseManager : MonoBehaviour
         dbLeaderboardsReference.Child(uuid).Child("updatedOn").SetValueAsync(updatedOn);
     }
 
+    public void GetLeaderboard(int limit = 4)
+    {
+        Query q = dbLeaderboardsReference.OrderByChild("score").LimitToLast(limit);
+
+        List<SimpleLeaderBoard> leaderBoardList = new List<SimpleLeaderBoard>();
+
+        dbLeaderboardsReference.GetValueAsync().ContinueWithOnMainThread(task =>
+        {
+            if (task.IsCanceled || task.IsFaulted)
+            {
+                Debug.LogError("Sorry, there was an error getting leaderboard entries, : ERROR: " + task.Exception);
+            } else if (task.IsCompleted)
+            {
+                DataSnapshot ds = task.Result;
+
+                if (ds.Exists)
+                {
+                    int rankCounter = 1;
+                    foreach (DataSnapshot d in ds.Children)
+                    {
+                        //create temp objects based on the results
+                        SimpleLeaderBoard lb = JsonUtility.FromJson<SimpleLeaderBoard>(d.GetRawJsonValue());
+                        
+                        //add item to list
+                        leaderBoardList.Add(lb);
+                        
+                        Debug.LogFormat("Leaderboard: Rank {0} Playername {1} Score{2}", rankCounter, lb.userName, lb.highestMoneyEarned);
+                    }
+                    leaderBoardList.Reverse();
+                    foreach(SimpleLeaderBoard lb in leaderBoardList)
+                    {
+                        Debug.LogFormat("Leaderboard: Rank{0} Playername {1} High Score {2}");
+                    }
+                }
+            }
+        });
+    }
+
 
 
     /// <summary>
