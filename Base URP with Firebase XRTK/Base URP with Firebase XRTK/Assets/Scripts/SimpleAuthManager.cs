@@ -64,7 +64,6 @@ public class SimpleAuthManager : MonoBehaviour
             {
                 await CreateNewSimplePlayer(newPlayer.UserId, username, username, newPlayer.Email);
                 await UpdatePlayerDisplayName(username); //update user's display name in auth service
-                SceneManager.LoadScene(1);
             }
         }
         else

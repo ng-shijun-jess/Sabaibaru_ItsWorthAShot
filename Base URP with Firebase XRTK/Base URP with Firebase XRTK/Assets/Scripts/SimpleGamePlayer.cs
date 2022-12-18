@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class SimpleGamePlayer : MonoBehaviour
+public class SimpleGamePlayer
 {
     //properties of our SimpleGamePlayer
     public string userName;

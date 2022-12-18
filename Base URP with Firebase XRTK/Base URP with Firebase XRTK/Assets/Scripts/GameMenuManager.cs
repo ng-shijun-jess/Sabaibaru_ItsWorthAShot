@@ -36,6 +36,6 @@ public class GameMenuManager : MonoBehaviour
 
     public void Leaderboard()
     {
-        SceneManager.LoadScene(4);
+        
     }
 }
