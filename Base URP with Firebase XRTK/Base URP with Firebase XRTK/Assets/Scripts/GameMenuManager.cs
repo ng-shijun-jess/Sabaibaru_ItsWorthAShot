@@ -20,7 +20,6 @@ public class GameMenuManager : MonoBehaviour
 
     public GameObject startGameBtn;
     public GameObject leaderboardBtn;
-    public GameObject playerProfileBtn;
 
 
 
@@ -34,10 +33,6 @@ public class GameMenuManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void PlayerProfile()
-    {
-        SceneManager.LoadScene(3);
-    }
 
     public void Leaderboard()
     {
