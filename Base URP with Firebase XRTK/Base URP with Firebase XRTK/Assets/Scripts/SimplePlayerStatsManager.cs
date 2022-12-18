@@ -37,13 +37,13 @@ public class SimplePlayerStatsManager : MonoBehaviour
         SimplePlayerStats playerStats = await fbMgr.GetPlayerStats(uuid); //not working
         Debug.Log("player Stats...:  " + playerStats.SimplePlayerStatsToJson());
 
-        customersHit.text = customersHit.ToString();
-        customersLost.text = customersLost.ToString();
-        customersChasedAway.text = customersChasedAway.ToString();
-        highestMoneyEarned.text = "$" + highestMoneyEarned;
-        totalMoneyEarned.text = "$" + totalMoneyEarned;
-        mostTimeWorked.text = mostTimeWorked + "s";
-        totalTimeWorked.text = totalTimeWorked + "s";
+        customersHit.text = playerStats.customersHit.ToString();
+        customersLost.text = playerStats.customersLost.ToString();
+        customersChasedAway.text = playerStats.customersChasedAway.ToString();
+        highestMoneyEarned.text = "$" + playerStats.highestMoneyEarned;
+        totalMoneyEarned.text = "$" + playerStats.totalMoneyEarned;
+        mostTimeWorked.text = playerStats.mostTimeWorked + "s";
+        totalTimeWorked.text = playerStats.totalTimeWorked + "s";
 
         playerName.text = auth.GetCurrentUserDisplayName();
     }
