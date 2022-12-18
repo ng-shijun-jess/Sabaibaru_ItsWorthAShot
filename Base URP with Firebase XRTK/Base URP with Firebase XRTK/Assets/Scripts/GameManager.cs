@@ -155,4 +155,13 @@ public class GameManager : MonoBehaviour
             pauseMenu.SetActive(true);
         }
     }
+    public void Resume()
+    {
+        if (!isGameActive)
+        {
+            Time.timeScale = 1;
+            isGameActive = true;
+            pauseMenu.SetActive(false);
+        }
+    }
 }
