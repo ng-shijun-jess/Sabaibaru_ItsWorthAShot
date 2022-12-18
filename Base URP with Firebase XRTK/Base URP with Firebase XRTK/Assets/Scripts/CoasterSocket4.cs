@@ -14,7 +14,7 @@ public class CoasterSocket4 : MonoBehaviour
     public GameObject customerPrefab;
     // Reference Customer Script
     private AICustomer1 customerScript;
-    
+
     // Reference Text Canvas on customer prefab
     private Transform wrongDrinkCanvas;
 

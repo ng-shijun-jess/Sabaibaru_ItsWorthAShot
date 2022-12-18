@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: dea141a821b81014a95ceb4ad99d7e37
+guid: 59d51841716652443a95218a39c28828
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Yelling Out
+    second: Mutant Walking
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -36,11 +36,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Yelling Out
+      name: Mutant Walking
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 129
+      lastFrame: 47
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

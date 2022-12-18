@@ -3240,9 +3240,10 @@ GameObject:
   - component: {fileID: 3284237098542201070}
   - component: {fileID: 8956580768958315878}
   - component: {fileID: -6690178242686566376}
+  - component: {fileID: 8127916447493571629}
   m_Layer: 0
   m_Name: Customer4
-  m_TagString: Untagged
+  m_TagString: AICustomer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3320,6 +3321,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &8127916447493571629
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8086222225789286446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.38
+  m_Height: 2.13
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.04, z: 0}
 --- !u!1 &8221949025620526898
 GameObject:
   m_ObjectHideFlags: 0

@@ -49,6 +49,7 @@ public class RightHandManager : MonoBehaviour
                 renderer = coasters[i].GetComponent<MeshRenderer>();
                 renderer.enabled = false;
             }
+            HideCoaster();
         }
     }
 

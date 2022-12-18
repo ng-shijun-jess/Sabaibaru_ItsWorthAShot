@@ -54,18 +54,8 @@ public class AIRudeCustomer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Drink")
+        if (gotHit)
         {
-            gameManagerScript.UpdateCustomersHit(1);/// Add Customers hit here                      DATABASE
-            gameManagerScript.UpdateCustomersChasedAway(1);//update customer chased
-
-            gotHit = true;
             rudeCustomerRemarks.SetActive(false);
             rudeAnimator.SetBool("StartWalk", true);
             // Set customerAI's destination to the leaving destination
@@ -77,8 +67,20 @@ public class AIRudeCustomer : MonoBehaviour
                 // Set its destination to itself to stop it from moving
                 rudeAI.SetDestination(transform.position);
                 Destroy(this.gameObject);
-                gotHit = false;
             }
+        }
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Drink")
+        {
+            gameManagerScript.UpdateCustomersHit(1);/// Add Customers hit here                      DATABASE
+            gameManagerScript.UpdateCustomersChasedAway(1);//update customer chased
+
+            gotHit = true;
+            
         }
     }
 }

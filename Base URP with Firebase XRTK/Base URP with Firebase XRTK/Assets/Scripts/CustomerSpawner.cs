@@ -24,7 +24,7 @@ public class CustomerSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Get the random index of the spot we will spawn the customer at
+        /*// Get the random index of the spot we will spawn the customer at
         int randomSpot = Random.Range(0, spawnSpots.Length);
         Debug.Log(randomSpot);
 
@@ -66,7 +66,7 @@ public class CustomerSpawner : MonoBehaviour
         if (randomSpot == 4)
         {
             orderSlipManager.SetSocket4Customer();
-        }
+        }*/
 
         StartCoroutine("SpawnCustomer");
     }
@@ -148,6 +148,9 @@ public class CustomerSpawner : MonoBehaviour
             {
                 // Randomise customer to spawn
                 int randomCustomer = Random.Range(0, customerArray.Length);
+
+                // Call OrderSlipChange function from orderSlipManager Script
+                orderSlipManager.OrderSlipEnable(randomSpot, randomCustomer);
 
                 // Add the used spot to the usedSpots list
                 usedSpots.Add(spotToAdd);
