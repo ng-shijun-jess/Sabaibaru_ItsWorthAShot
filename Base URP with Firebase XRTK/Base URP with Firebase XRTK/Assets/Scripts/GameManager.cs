@@ -68,8 +68,8 @@ public class GameManager : MonoBehaviour
             //When player live hits to 0, it is game over
             if (playerLives == 0)
             {
-                GameOver(); 
-
+                GameOver();
+                isGameActive = false;
             }
         }
     }
@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         totalTimeWorked = (int)Math.Round(time);
-        isGameActive = false;
+        
         Time.timeScale = 0;
         //if not updated, the player stats will be updated
         if(!isPlayerStatUpdated)
