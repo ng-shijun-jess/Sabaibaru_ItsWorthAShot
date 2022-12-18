@@ -103,13 +103,13 @@ public class SimpleFirebaseManager : MonoBehaviour
         dbLeaderboardsReference.Child(uuid).Child("updatedOn").SetValueAsync(updatedOn);
     }
 
-    public void GetLeaderboard(int limit = 4)
+    public async Task<List<SimpleLeaderBoard>> GetLeaderboard(int limit = 4)
     {
         Query q = dbLeaderboardsReference.OrderByChild("score").LimitToLast(limit);
 
         List<SimpleLeaderBoard> leaderBoardList = new List<SimpleLeaderBoard>();
 
-        dbLeaderboardsReference.GetValueAsync().ContinueWithOnMainThread(task =>
+        await dbLeaderboardsReference.GetValueAsync().ContinueWithOnMainThread(task =>
         {
             if (task.IsCanceled || task.IsFaulted)
             {
@@ -131,14 +131,21 @@ public class SimpleFirebaseManager : MonoBehaviour
                         
                         Debug.LogFormat("Leaderboard: Rank {0} Playername {1} Score{2}", rankCounter, lb.userName, lb.highestMoneyEarned);
                     }
+                    //change list to descending order
                     leaderBoardList.Reverse();
+
+                    //for each simpleleaderboard object inside our leaderboardlist
                     foreach(SimpleLeaderBoard lb in leaderBoardList)
                     {
-                        Debug.LogFormat("Leaderboard: Rank{0} Playername {1} High Score {2}");
+                        Debug.LogFormat("Leaderboard: Rank{0} Playername {1} High Score {2}", rankCounter, lb.userName, lb.highestMoneyEarned);
+
+                        rankCounter++;
                     }
                 }
             }
         });
+
+        return leaderBoardList;
     }
 
 
