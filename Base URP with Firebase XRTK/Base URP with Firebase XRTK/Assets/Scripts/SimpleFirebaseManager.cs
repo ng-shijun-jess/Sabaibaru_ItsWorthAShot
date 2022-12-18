@@ -134,6 +134,19 @@ public class SimpleFirebaseManager : MonoBehaviour
                     //change list to descending order
                     leaderBoardList.Reverse();
 
+                    for (int i = 0; i < leaderBoardList.Count; i++)
+                    {
+                        for(int j = i + 1; j < leaderBoardList.Count; j++)
+                        {
+                            if(leaderBoardList[j].highestMoneyEarned > leaderBoardList[i].highestMoneyEarned)
+                            {
+                                SimpleLeaderBoard tmp = leaderBoardList[i];
+                                leaderBoardList[i] = leaderBoardList[j];
+                                leaderBoardList[j] = tmp;
+                            }
+                        }
+                    }
+
                     //for each simpleleaderboard object inside our leaderboardlist
                     foreach(SimpleLeaderBoard lb in leaderBoardList)
                     {

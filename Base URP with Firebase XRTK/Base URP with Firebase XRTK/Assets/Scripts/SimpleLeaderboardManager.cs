@@ -49,6 +49,7 @@ public class SimpleLeaderboardManager : MonoBehaviour
             leaderBoardDetails[2].text = lb.highestMoneyEarned.ToString();
 
             rankCounter++;
+
         }
     }
 
