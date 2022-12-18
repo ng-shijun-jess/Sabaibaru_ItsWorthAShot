@@ -24,12 +24,12 @@ public class GameManager : MonoBehaviour
 
 
     //all the data needed for the update player stats
-    private int customersHit;
-    private int customersLost;
-    private int customersChasedAway;
-    private int totalMoneyEarned;
-    private int totalTimeWorked;
-    private int customersServed;
+    public int customersHit;
+    public int customersLost;
+    public int customersChasedAway;
+    public int totalMoneyEarned;
+    public int totalTimeWorked;
+    public int customersServed;
 
     public float time;
 
