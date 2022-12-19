@@ -26,9 +26,9 @@ public class SimplePlayerStats
     public int customersLost;
     public int customersChasedAway;
     public int highestMoneyEarned;
-    public int totalMoneyEarned;
+    //public int totalMoneyEarned;
     public int mostTimeWorked;
-    public int totalTimeWorked;
+    //public int totalTimeWorked;
     public int customersServed;
     public long updatedOn;
     public long createdOn;
