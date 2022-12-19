@@ -56,12 +56,10 @@ public class SimpleFirebaseManager : MonoBehaviour
                     Debug.Log("player stats does exist");
                     //update player stats
                     //compare existing highscore and set new highscore
-                    //add xp per game
-                    //add time spent
 
                     SimplePlayerStats sp = JsonUtility.FromJson<SimplePlayerStats>(playerStats.GetRawJsonValue());
-                    //sp.totalTimeSpent += totalTimeSpent;
-                    sp.updatedOn += sp.GetTimeUnix();
+                    //sp.totalTimeWorked += totalTimeWorked;
+                    sp.updatedOn = sp.GetTimeUnix();
                  
                     if (totalMoneyEarned > sp.highestMoneyEarned)
                     {

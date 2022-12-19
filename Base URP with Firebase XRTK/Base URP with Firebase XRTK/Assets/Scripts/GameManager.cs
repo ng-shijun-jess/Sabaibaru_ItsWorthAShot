@@ -87,12 +87,12 @@ public class GameManager : MonoBehaviour
             //When player live hits to 0, it is game over
             if (playerLives == 0)
             {
-                Debug.Log(customersHit);
-                Debug.Log(customersLost);
-                Debug.Log(customersChasedAway);
-                Debug.Log(totalMoneyEarned);
-                Debug.Log(totalTimeWorked);
-                Debug.Log(customersServed);
+                Debug.Log("CustomersHit" + customersHit);
+                Debug.Log("CustomersLost" + customersLost);
+                Debug.Log("CustomersChasedAway" + customersChasedAway);
+                Debug.Log("totalMoneyEarned" + totalMoneyEarned);
+                Debug.Log("totalTimeWorked" + totalTimeWorked);
+                Debug.Log("customersServed" + customersServed);
 
                 GameOver();
                 isGameActive = false;

@@ -93,6 +93,7 @@ public class AICustomer1 : MonoBehaviour
             {
                 addServedCustomer = true;
                 gameManagerScript.UpdateTotalCustomersServed(1);/// Add Served customer here                                   DATABASE
+                Debug.Log("customers served");
                 if (this.gameObject.name == "Customer1")
                 {
                     firstMoneyRangeFloat = Random.Range(30, 60);
