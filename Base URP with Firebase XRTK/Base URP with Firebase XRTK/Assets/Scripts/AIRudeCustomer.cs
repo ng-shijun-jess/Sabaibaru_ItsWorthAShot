@@ -28,6 +28,9 @@ public class AIRudeCustomer : MonoBehaviour
     // Reference GameManager Script
     private GameManager gameManagerScript;
 
+    private GameObject sfxManager;
+    private SFXManager sfxManagerScript;
+
     private void Awake()
     {
         // Look for Customer Spawner gameObject
@@ -42,18 +45,24 @@ public class AIRudeCustomer : MonoBehaviour
         gameManager = GameObject.Find("GameManager");
         // Find GameManager Script on GameManager GameObject
         gameManagerScript = gameManager.GetComponent<GameManager>();
+
+        sfxManager = GameObject.Find("SFXManager");
+        sfxManagerScript = sfxManager.GetComponent<SFXManager>();
+        sfxManagerScript.RudeCustomerSFXOn();
     }
 
     void Start()
     {
         rudeCustomerRemarks.SetActive(true);
+        
         // Find the AI's destination with object tag.
-        aiDestination = GameObject.FindGameObjectWithTag("AIDestination");
+        aiDestination = GameObject.FindGameObjectWithTag("AIDestination");        
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (gotHit)
         {
             rudeCustomerRemarks.SetActive(false);
@@ -79,6 +88,9 @@ public class AIRudeCustomer : MonoBehaviour
             gameManagerScript.UpdateCustomersHit(1);/// Add Customers hit here                      DATABASE
             gameManagerScript.UpdateCustomersChasedAway(1);//update customer chased
 
+            sfxManager = GameObject.Find("SFXManager");
+            sfxManager.GetComponent<SFXManager>();
+            sfxManagerScript.RudeCustomerSFXOff();
             gotHit = true;
             
         }
