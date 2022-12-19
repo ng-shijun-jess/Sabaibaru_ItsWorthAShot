@@ -22,8 +22,6 @@ public class SimplePlayerStatsManager : MonoBehaviour
     public SimpleFirebaseManager fbMgr;
     public SimpleAuthManager auth;
 
-    public GameObject mainMenuBtn;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -56,8 +54,4 @@ public class SimplePlayerStatsManager : MonoBehaviour
         return dateTime.ToString("dd MMM yyyy");
     }
 
-    public void ReturnToMain()
-    {
-        SceneManager.LoadScene(2);
-    }
 }

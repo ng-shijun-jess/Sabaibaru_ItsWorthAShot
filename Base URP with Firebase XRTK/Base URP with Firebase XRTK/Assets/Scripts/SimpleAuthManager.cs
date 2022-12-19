@@ -32,6 +32,8 @@ public class SimpleAuthManager : MonoBehaviour
     public GameObject forgetPasswordBtn;
     public GameObject signOutBtn;
 
+    public GameObject mainMenu;
+
     public TextMeshProUGUI errorMsgContent;
     public TextMeshProUGUI displayName;
 
@@ -64,6 +66,8 @@ public class SimpleAuthManager : MonoBehaviour
             {
                 await CreateNewSimplePlayer(newPlayer.UserId, username, username, newPlayer.Email);
                 await UpdatePlayerDisplayName(username); //update user's display name in auth service
+
+                mainMenu.SetActive(true);
             }
         }
         else
@@ -99,6 +103,8 @@ public class SimpleAuthManager : MonoBehaviour
                 errorMsgContent.gameObject.SetActive(false);
                 newPlayer = task.Result;
                 Debug.LogFormat("NewPlayer Details {0} {1}", newPlayer.UserId, newPlayer.Email);
+
+                
             }
         });
         return newPlayer;
@@ -172,6 +178,8 @@ public class SimpleAuthManager : MonoBehaviour
                     FirebaseUser currentPlayer = task.Result;
                     Debug.LogFormat("Welcome to It's Worth A Shot {0} :: {1}", currentPlayer.UserId, currentPlayer.Email);
                     displayName.text = "Welcome, " + GetCurrentUserDisplayName();
+
+                    mainMenu.SetActive(true);
                 }
             });
         }
