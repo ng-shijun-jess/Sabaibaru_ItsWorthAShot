@@ -13262,6 +13262,7 @@ MonoBehaviour:
   totalMoneyEarnedText: {fileID: 1903083740}
   goTotalMoneyEarnedText: {fileID: 2144522757}
   goTotalCustomersServedText: {fileID: 2133124416}
+  goTotalTimeWorkedText: {fileID: 1842794335}
   isGameActive: 0
   customersHit: 0
   customersLost: 0

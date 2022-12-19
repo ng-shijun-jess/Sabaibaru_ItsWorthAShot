@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI goTotalMoneyEarnedText;
     public TextMeshProUGUI goTotalCustomersServedText;
+    public TextMeshProUGUI goTotalTimeWorkedText;
 
     public bool isGameActive;
 
@@ -155,6 +156,7 @@ public class GameManager : MonoBehaviour
         //updating the text in the Game Over Menu
         goTotalMoneyEarnedText.text = "Money Earned: $" + totalMoneyEarned;
         goTotalCustomersServedText.text = "Total Customer served: " + customersServed;
+        goTotalTimeWorkedText.text = "Total Time Worked: " + totalTimeWorked + "s";
 
 
 
