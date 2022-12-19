@@ -160,9 +160,9 @@ public class GameManager : MonoBehaviour
 
 }
     //update player stats 
-    public void UpdatePlayerStat(int customersHit, int customersLost, int customersChasedAway, int totalMoneyEarned, int totalTimeWorked, int customersServed)
+    public void UpdatePlayerStat(int totalMoneyEarned, int totalTimeWorked, int customersHit, int customersLost, int customersChasedAway, int customersServed)
     {
-        firebaseMgr.UpdatePlayerStats(auth.GetCurrentUser().UserId, customersHit, customersLost, customersChasedAway, totalMoneyEarned, totalTimeWorked, customersServed, auth.GetCurrentUserDisplayName()); ///need to link this
+        firebaseMgr.UpdatePlayerStats(auth.GetCurrentUser().UserId, totalMoneyEarned, totalTimeWorked, customersHit, customersLost, customersChasedAway, customersServed, auth.GetCurrentUserDisplayName()); ///need to link this
     }
 
     //Goes to Main Menu

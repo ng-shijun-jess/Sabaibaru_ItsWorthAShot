@@ -9,12 +9,12 @@ using UnityEngine.SceneManagement;
 public class SimplePlayerStatsManager : MonoBehaviour
 {
     public TextMeshProUGUI playerName;
+    public TextMeshProUGUI highestMoneyEarned;
+    public TextMeshProUGUI mostTimeWorked;
     public TextMeshProUGUI customersHit;
     public TextMeshProUGUI customersLost;
     public TextMeshProUGUI customersChasedAway;
-    public TextMeshProUGUI highestMoneyEarned;
     public TextMeshProUGUI totalMoneyEarned;
-    public TextMeshProUGUI mostTimeWorked;
     public TextMeshProUGUI totalTimeWorked;
     public TextMeshProUGUI customersServed;
 
@@ -28,8 +28,8 @@ public class SimplePlayerStatsManager : MonoBehaviour
     void Start()
     {
         //retrieve current logged in user uuid
-        //upadte UI
-        UpdatePlayerStats(auth.GetCurrentUser().UserId);
+        //update UI
+        UpdatePlayerStats(auth.GetCurrentUser().UserId); //not working for some reason
     }
 
     public async void UpdatePlayerStats(string uuid)

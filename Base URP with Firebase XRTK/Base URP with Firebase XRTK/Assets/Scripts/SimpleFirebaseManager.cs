@@ -35,7 +35,7 @@ public class SimpleFirebaseManager : MonoBehaviour
     /// /// <param name="totalTimeWorked"></param>
     /// /// <param name="customersServed"></param>
     /// <param name="displayName"></param>
-    public void UpdatePlayerStats(string uuid, int customersHit, int customersLost, int customersChasedAway, int totalMoneyEarned, int totalTimeWorked, int customersServed, string displayName)
+    public void UpdatePlayerStats(string uuid, int totalMoneyEarned, int totalTimeWorked, int customersHit, int customersLost, int customersChasedAway,  int customersServed, string displayName)
     {
         Query playerQuery = dbPlayerStatsReference.Child(uuid);
 
@@ -69,7 +69,7 @@ public class SimpleFirebaseManager : MonoBehaviour
                     if (totalTimeWorked > sp.mostTimeWorked)
                     {
                         sp.mostTimeWorked = totalTimeWorked;
-                        UpdatePlayerLeaderBoardEntry(uuid, sp.mostTimeWorked, sp.updatedOn);
+                        //UpdatePlayerLeaderBoardEntry(uuid, sp.mostTimeWorked, sp.updatedOn);
                     }
 
 
@@ -80,7 +80,7 @@ public class SimpleFirebaseManager : MonoBehaviour
                 {
 
                     //Create player stats
-                    SimplePlayerStats sp = new SimplePlayerStats(displayName,customersHit, customersLost, customersChasedAway, totalMoneyEarned, totalTimeWorked, customersServed);
+                    SimplePlayerStats sp = new SimplePlayerStats(displayName, totalMoneyEarned, totalTimeWorked, customersHit, customersLost, customersChasedAway, customersServed);
 
                     SimpleLeaderBoard lb = new SimpleLeaderBoard(displayName, totalMoneyEarned);
 

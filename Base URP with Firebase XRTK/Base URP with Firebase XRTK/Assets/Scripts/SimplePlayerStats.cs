@@ -34,17 +34,21 @@ public class SimplePlayerStats
     public long createdOn;
 
     //simple constructor
+    public SimplePlayerStats()
+    {
 
-    public SimplePlayerStats(string userName, int customersHit = 0, int customersLost = 0, int customersChasedAway = 0, int highestMoneyEarned = 0, int totalMoneyEarned = 0, int mostTimeWorked = 0, int totalTimeWorked = 0, int customersServed = 0)
+    }
+
+    public SimplePlayerStats(string userName, int highestMoneyEarned, int mostTimeWorked, int customersHit = 0, int customersLost = 0, int customersChasedAway = 0, int customersServed = 0)
     {
         this.userName = userName;
+        this.highestMoneyEarned = highestMoneyEarned;
+        this.mostTimeWorked = mostTimeWorked;
         this.customersHit = customersHit;
         this.customersLost = customersLost;
         this.customersChasedAway = customersChasedAway;
-        this.highestMoneyEarned = highestMoneyEarned;
-        this.totalMoneyEarned = totalMoneyEarned;
-        this.mostTimeWorked = mostTimeWorked;
-        this.totalTimeWorked = totalTimeWorked;
+        //this.totalMoneyEarned = totalMoneyEarned;
+        //this.totalTimeWorked = totalTimeWorked;
         this.customersServed = customersServed;
 
         var timestamp = this.GetTimeUnix();
