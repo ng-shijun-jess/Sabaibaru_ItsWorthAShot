@@ -35,7 +35,7 @@ public class SimplePlayerStats
 
     //simple constructor
 
-    public SimplePlayerStats(string userName, int customersHit = 0, int customersLost = 0, int customersChasedAway = 0, int highestMoneyEarned, int totalMoneyEarned = 0, int mostTimeWorked, int totalTimeWorked = 0, int customersServed = 0)
+    public SimplePlayerStats(string userName, int customersHit = 0, int customersLost = 0, int customersChasedAway = 0, int highestMoneyEarned = 0, int totalMoneyEarned = 0, int mostTimeWorked = 0, int totalTimeWorked = 0, int customersServed = 0)
     {
         this.userName = userName;
         this.customersHit = customersHit;
