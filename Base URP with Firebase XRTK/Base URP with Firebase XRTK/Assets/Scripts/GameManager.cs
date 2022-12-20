@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
+    public GameObject mainMenu;
 
 
     // Defining Lives Int
@@ -186,6 +187,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
             isGameActive = true;
             pauseMenu.SetActive(false);
+            mainMenu.SetActive(false);
         }
     }
 }

@@ -25,7 +25,7 @@ public class SimplePlayerStatsManager : MonoBehaviour
     {
         //retrieve current logged in user uuid
         //update UI
-        UpdatePlayerStats(auth.GetCurrentUser().UserId); //not working for some reason
+        UpdatePlayerStats(auth.GetCurrentUser().UserId); 
     }
 
     public async void UpdatePlayerStats(string uuid)

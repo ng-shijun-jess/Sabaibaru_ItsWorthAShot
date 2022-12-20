@@ -202,6 +202,7 @@ public class SimpleAuthManager : MonoBehaviour
             //get current index of a scene
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
+
             auth.SignOut();
             if(currentSceneIndex == 0)
             {
@@ -209,6 +210,9 @@ public class SimpleAuthManager : MonoBehaviour
             }
 
         }
+
+            SceneManager.LoadScene(1);
+        
     }
 
     public void ForgetPassword()
