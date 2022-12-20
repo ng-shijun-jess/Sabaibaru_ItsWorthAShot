@@ -26,6 +26,7 @@ public class SimpleFirebaseManager : MonoBehaviour
 
     /// <summary>
     /// create a new entry only if first time playing, update whem there's exisitng entries
+    /// Update when there's existing entries
     /// </summary>
     /// <param name="uuid"></param>
     /// <param name="customersHit"></param>
@@ -48,7 +49,7 @@ public class SimpleFirebaseManager : MonoBehaviour
             }
             else if (task.IsCompleted)
             {
-               
+
                 DataSnapshot playerStats = task.Result;
                 //check if there is an entry created
                 if (playerStats.Exists)
@@ -58,9 +59,10 @@ public class SimpleFirebaseManager : MonoBehaviour
                     //compare existing highscore and set new highscore
 
                     SimplePlayerStats sp = JsonUtility.FromJson<SimplePlayerStats>(playerStats.GetRawJsonValue());
+                    
                     //sp.totalTimeWorked += totalTimeWorked;
                     sp.updatedOn = sp.GetTimeUnix();
-                 
+
                     if (totalMoneyEarned > sp.highestMoneyEarned)
                     {
                         sp.highestMoneyEarned = totalMoneyEarned;
@@ -72,9 +74,12 @@ public class SimpleFirebaseManager : MonoBehaviour
                         //UpdatePlayerLeaderBoardEntry(uuid, sp.mostTimeWorked, sp.updatedOn);
                     }
 
-
+                    //update with entire temp sp object
                     //path: playerStats/$uuid
-                    dbPlayerStatsReference.Child(uuid).SetRawJsonValueAsync(sp.SimplePlayerStatsToJson());
+
+
+                    dbPlayerStatsReference.Child(uuid).SetRawJsonValueAsync(sp.SimplePlayerStatsToJson()); //this is the problem for updating player stats
+                    Debug.Log(sp.SimplePlayerStatsToJson());
                 }
                 else
                 {
@@ -164,7 +169,7 @@ public class SimpleFirebaseManager : MonoBehaviour
     /// <summary>
     /// 
     /// </summary>
-    /// <param name="uuid">retrieve form authenticate</param>
+    /// <param name="uuid">retrieve from authenticate</param>
     /// <returns></returns>
     public async Task<SimplePlayerStats> GetPlayerStats(string uuid)
     {

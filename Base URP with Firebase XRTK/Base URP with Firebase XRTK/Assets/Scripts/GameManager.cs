@@ -142,9 +142,10 @@ public class GameManager : MonoBehaviour
     //When the game is over
     public void GameOver()
     {
-        
+        isGameActive = false;
+
         //if not updated, the player stats will be updated
-        if(!isPlayerStatUpdated)
+        if (!isPlayerStatUpdated)
         {
             UpdatePlayerStat(this.customersHit, this.customersLost, this.customersChasedAway, this.totalMoneyEarned, this.totalTimeWorked, this.customersServed); //need to update this
             Debug.Log("playerStats is being updated");
