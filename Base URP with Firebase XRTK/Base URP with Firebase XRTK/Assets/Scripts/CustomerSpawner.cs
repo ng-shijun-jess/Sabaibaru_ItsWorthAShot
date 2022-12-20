@@ -7,7 +7,6 @@ public class CustomerSpawner : MonoBehaviour
     // Reference OrderSlipManager script
     public OrderSlipManager orderSlipManager;
 
-    // Reference GameManager script
     public GameManager gM; 
     // Spawn spots array
     public GameObject[] spawnSpots;

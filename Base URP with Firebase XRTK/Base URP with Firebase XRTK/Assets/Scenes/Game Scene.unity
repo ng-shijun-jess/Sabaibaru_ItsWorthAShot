@@ -13840,6 +13840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orderSlipManager: {fileID: 722603274}
+  gM: {fileID: 1818043733}
   spawnSpots:
   - {fileID: 8954377824448788784}
   - {fileID: 8954377824506432021}
@@ -13855,7 +13856,6 @@ MonoBehaviour:
   - {fileID: 5725096179622691747, guid: 93ce7ac67c4f00c408b6e412a3431b90, type: 3}
   - {fileID: 1099518181691861378, guid: e6c61b0030a207641b6342059b9b8cb2, type: 3}
   usedSpots: []
-  gameIsActive: 1
   spotsFull: 0
   coasterSocket0: {fileID: 195768873}
   customer: {fileID: 0}
