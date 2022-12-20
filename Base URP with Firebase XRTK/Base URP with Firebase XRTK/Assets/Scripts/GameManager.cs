@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
 
-    public float startTime;
 
     // Defining Lives Int
     public int playerLives = 3;
@@ -67,7 +66,6 @@ public class GameManager : MonoBehaviour
         UpdateCustomersChasedAway(0);
         UpdateTotalMoneyEarned(0);
         UpdateTotalCustomersServed(0);
-        startTime = Time.time;
     }
 
     private void Update()
@@ -88,11 +86,14 @@ public class GameManager : MonoBehaviour
             //When player live hits to 0, it is game over
             if (playerLives == 0)
             {
+
+                totalTimeWorked = (int)Math.Round(time);
+
                 Debug.Log("CustomersHit" + customersHit);
                 Debug.Log("CustomersLost" + customersLost);
                 Debug.Log("CustomersChasedAway" + customersChasedAway);
                 Debug.Log("totalMoneyEarned" + totalMoneyEarned);
-                Debug.Log("totalTimeWorked" + totalTimeWorked);
+                Debug.Log("totalTimeWorked" + time);
                 Debug.Log("customersServed" + customersServed);
 
                 GameOver();
@@ -141,9 +142,7 @@ public class GameManager : MonoBehaviour
     //When the game is over
     public void GameOver()
     {
-        totalTimeWorked = (int)Math.Round(time);
         
-        Time.timeScale = 0;
         //if not updated, the player stats will be updated
         if(!isPlayerStatUpdated)
         {
