@@ -14,8 +14,6 @@ public class SimplePlayerStatsManager : MonoBehaviour
     public TextMeshProUGUI customersHit;
     public TextMeshProUGUI customersLost;
     public TextMeshProUGUI customersChasedAway;
-    public TextMeshProUGUI totalMoneyEarned;
-    public TextMeshProUGUI totalTimeWorked;
     public TextMeshProUGUI customersServed;
 
 
@@ -39,6 +37,7 @@ public class SimplePlayerStatsManager : MonoBehaviour
         customersLost.text = playerStats.customersLost.ToString();
         customersChasedAway.text = playerStats.customersChasedAway.ToString();
         highestMoneyEarned.text = "$" + playerStats.highestMoneyEarned;
+        customersServed.text = playerStats.customersServed.ToString();
         //totalMoneyEarned.text = "$" + playerStats.totalMoneyEarned;
         mostTimeWorked.text = playerStats.mostTimeWorked + "s";
         //totalTimeWorked.text = playerStats.totalTimeWorked + "s";

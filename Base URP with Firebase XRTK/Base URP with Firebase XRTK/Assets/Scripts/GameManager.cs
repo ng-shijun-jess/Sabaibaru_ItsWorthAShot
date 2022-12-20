@@ -166,7 +166,7 @@ public class GameManager : MonoBehaviour
     //Goes to Main Menu
     public void MainMenu()
     {
-        SceneManager.LoadScene(1);
+        
 
     }
     //Stops time
