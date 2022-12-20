@@ -94,7 +94,7 @@ public class AICustomer1 : MonoBehaviour
                 addServedCustomer = true;
                 gameManagerScript.UpdateTotalCustomersServed(1);/// Add Served customer here                                   DATABASE
                 Debug.Log("customers has been served");
-                if (this.gameObject.name == "Customer1")
+                if (this.gameObject.tag == "Customer1")
                 {
                     Debug.Log("money Earned");
                     firstMoneyRangeFloat = Random.Range(30, 60);
@@ -103,7 +103,7 @@ public class AICustomer1 : MonoBehaviour
                     
                 }
 
-                if (this.gameObject.name == "Customer2")
+                if (this.gameObject.tag == "Customer2")
                 {
                     secondMoneyRangeFloat = Random.Range(30, 60);
                     int secondMoneyRangeInt = (int)secondMoneyRangeFloat;
@@ -111,7 +111,7 @@ public class AICustomer1 : MonoBehaviour
                     Debug.Log("money Earned");
                 }
 
-                if (this.gameObject.name == "Customer3")
+                if (this.gameObject.tag == "Customer3")
                 {
                     thirdMoneyRangeFloat = Random.Range(30, 60);
                     int thirdMoneyRangeInt = (int)thirdMoneyRangeFloat;

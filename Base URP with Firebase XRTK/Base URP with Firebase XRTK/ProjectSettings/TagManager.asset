@@ -13,6 +13,9 @@ TagManager:
   - AICustomer
   - Drink
   - Floor
+  - Customer1
+  - Customer2
+  - Customer3
   layers:
   - Default
   - TransparentFX
