@@ -135,6 +135,7 @@ public class GameManager : MonoBehaviour
     //When the game is over
     public void GameOver()
     {
+        Time.timeScale = 0;
         isGameActive = false;
 
         //if not updated, the player stats will be updated
