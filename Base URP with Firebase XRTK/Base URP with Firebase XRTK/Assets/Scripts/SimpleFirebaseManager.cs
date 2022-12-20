@@ -83,6 +83,7 @@ public class SimpleFirebaseManager : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("creating new player stats");
 
                     //Create player stats
                     SimplePlayerStats sp = new SimplePlayerStats(displayName, totalMoneyEarned, totalTimeWorked, customersHit, customersLost, customersChasedAway, customersServed);

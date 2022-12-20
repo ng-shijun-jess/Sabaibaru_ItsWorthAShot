@@ -89,13 +89,6 @@ public class GameManager : MonoBehaviour
 
                 totalTimeWorked = (int)Math.Round(time);
 
-                Debug.Log("CustomersHit" + customersHit);
-                Debug.Log("CustomersLost" + customersLost);
-                Debug.Log("CustomersChasedAway" + customersChasedAway);
-                Debug.Log("totalMoneyEarned" + totalMoneyEarned);
-                Debug.Log("totalTimeWorked" + time);
-                Debug.Log("customersServed" + customersServed);
-
                 GameOver();
                 isGameActive = false;
             }
@@ -147,7 +140,7 @@ public class GameManager : MonoBehaviour
         //if not updated, the player stats will be updated
         if (!isPlayerStatUpdated)
         {
-            UpdatePlayerStat(this.customersHit, this.customersLost, this.customersChasedAway, this.totalMoneyEarned, this.totalTimeWorked, this.customersServed); //need to update this
+            UpdatePlayerStat(totalMoneyEarned, totalTimeWorked, customersHit, customersLost, customersChasedAway,  customersServed); //need to update this
             Debug.Log("playerStats is being updated");
         }
         isPlayerStatUpdated = true;
@@ -164,6 +157,13 @@ public class GameManager : MonoBehaviour
     //update player stats 
     public void UpdatePlayerStat(int totalMoneyEarned, int totalTimeWorked, int customersHit, int customersLost, int customersChasedAway, int customersServed)
     {
+        Debug.Log("CustomersHit" + customersHit);
+        Debug.Log("CustomersLost" + customersLost);
+        Debug.Log("CustomersChasedAway" + customersChasedAway);
+        Debug.Log("totalMoneyEarned" + totalMoneyEarned);
+        Debug.Log("totalTimeWorked" + time);
+        Debug.Log("customersServed" + customersServed);
+
         firebaseMgr.UpdatePlayerStats(auth.GetCurrentUser().UserId, totalMoneyEarned, totalTimeWorked, customersHit, customersLost, customersChasedAway, customersServed, auth.GetCurrentUserDisplayName()); ///need to link this
     }
 
