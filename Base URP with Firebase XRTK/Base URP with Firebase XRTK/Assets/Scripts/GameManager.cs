@@ -157,12 +157,7 @@ public class GameManager : MonoBehaviour
     //update player stats 
     public void UpdatePlayerStat(int totalMoneyEarned, int totalTimeWorked, int customersHit, int customersLost, int customersChasedAway, int customersServed)
     {
-        Debug.Log("CustomersHit" + customersHit);
-        Debug.Log("CustomersLost" + customersLost);
-        Debug.Log("CustomersChasedAway" + customersChasedAway);
-        Debug.Log("totalMoneyEarned" + totalMoneyEarned);
-        Debug.Log("totalTimeWorked" + time);
-        Debug.Log("customersServed" + customersServed);
+        
 
         firebaseMgr.UpdatePlayerStats(auth.GetCurrentUser().UserId, totalMoneyEarned, totalTimeWorked, customersHit, customersLost, customersChasedAway, customersServed, auth.GetCurrentUserDisplayName()); ///need to link this
     }

@@ -54,6 +54,14 @@ public class SimpleFirebaseManager : MonoBehaviour
                 //check if there is an entry created
                 if (playerStats.Exists)
                 {
+
+                    Debug.Log("CustomersHit" + customersHit);
+                    Debug.Log("CustomersLost" + customersLost);
+                    Debug.Log("CustomersChasedAway" + customersChasedAway);
+                    Debug.Log("totalMoneyEarned" + totalMoneyEarned);
+                    Debug.Log("totalTimeWorked" + totalTimeWorked);
+                    Debug.Log("customersServed" + customersServed);
+
                     Debug.Log("player stats does exist");
                     //update player stats
                     //compare existing highscore and set new highscore
@@ -73,6 +81,12 @@ public class SimpleFirebaseManager : MonoBehaviour
                         sp.mostTimeWorked = totalTimeWorked;
                         //UpdatePlayerLeaderBoardEntry(uuid, sp.mostTimeWorked, sp.updatedOn);
                     }
+
+                    sp.customersHit = customersHit;
+                    sp.customersLost = customersLost;
+                    sp.customersChasedAway = customersChasedAway;
+                    sp.customersServed = customersServed;
+
 
                     //update with entire temp sp object
                     //path: playerStats/$uuid
