@@ -32,7 +32,7 @@ public class GameMenuManager : MonoBehaviour
     //Goes to the game scene to start game
     public void StartGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     
     //When player wishes to exit the game
