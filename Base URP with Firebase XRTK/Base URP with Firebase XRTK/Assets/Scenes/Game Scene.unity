@@ -1451,6 +1451,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8882206277081898370}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &89903566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 89903567}
+  - component: {fileID: 89903568}
+  m_Layer: 0
+  m_Name: SimpleLeaderboardManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &89903567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89903566}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.7637997, y: 0.118605256, z: 2.9491932}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1862853017}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &89903568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89903566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b27a68a77d74694ebc72ba79e1526ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fbManager: {fileID: 930359412}
+  rowPrefab: {fileID: 65604493453469831, guid: f0771f73d6296b0428ac2483227d166f, type: 3}
+  tableContent: {fileID: 1603230233}
 --- !u!4 &99454841 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4349549203921020, guid: 41c2416439f912f4e89bd6b1167f45e5,
@@ -4972,7 +5019,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1862853017}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &349688328 stripped
 Transform:
@@ -14258,9 +14305,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 349309640}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
+      - m_Target: {fileID: 349309639}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20067,6 +20114,7 @@ Transform:
   - {fileID: 1046004894}
   - {fileID: 116581721}
   - {fileID: 722603275}
+  - {fileID: 89903567}
   - {fileID: 349309641}
   - {fileID: 1751290023}
   m_Father: {fileID: 0}
@@ -24064,7 +24112,7 @@ PrefabInstance:
     - target: {fileID: 3606808363096621922, guid: ecc4e77e7f7db61448ff8ed7f7833ad9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3606808363096621922, guid: ecc4e77e7f7db61448ff8ed7f7833ad9,
         type: 3}
