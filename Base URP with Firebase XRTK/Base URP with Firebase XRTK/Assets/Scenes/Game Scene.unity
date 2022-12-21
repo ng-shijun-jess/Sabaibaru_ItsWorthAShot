@@ -11397,6 +11397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxBeerSnapped: {fileID: 1698602459}
   sfxRudeCustomer: {fileID: 1085891083}
+  sfxTavernBGM: {fileID: 966331319}
 --- !u!4 &1046004894
 Transform:
   m_ObjectHideFlags: 0
@@ -19855,6 +19856,10 @@ MonoBehaviour:
   pauseMenu: {fileID: 1776206586}
   gameOverMenu: {fileID: 1897210443}
   mainMenu: {fileID: 1369182895}
+  rudeCustomer: {fileID: 8086222225789286446, guid: 091cf5bb36a3aac4193f97bf7a4fcbf1,
+    type: 3}
+  sfxMgr: {fileID: 1046004892}
+  sfxMgrScript: {fileID: 1046004893}
   playerLives: 3
   livesCounter: {fileID: 1239222407}
   timeTracker: {fileID: 1703762176}

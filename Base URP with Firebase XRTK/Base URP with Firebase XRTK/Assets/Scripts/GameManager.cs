@@ -42,7 +42,10 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
     public GameObject mainMenu;
+    private GameObject rudeCustomer;
 
+    public GameObject sfxMgr;
+    public SFXManager sfxMgrScript;
 
     // Defining Lives Int
     public int playerLives = 3;
@@ -139,6 +142,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         isGameActive = false;
 
+        sfxMgrScript.RudeCustomerSFXOff();
+        sfxMgrScript.TavernBGMOFF();
+
         //if not updated, the player stats will be updated
         if (!isPlayerStatUpdated)
         {
@@ -178,6 +184,10 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             isGameActive = false;
             pauseMenu.SetActive(true);
+
+            //SFX audio off
+            sfxMgrScript.RudeCustomerSFXOff();
+            sfxMgrScript.TavernBGMOFF();
         }
     }
     public void Resume()
@@ -188,6 +198,15 @@ public class GameManager : MonoBehaviour
             isGameActive = true;
             pauseMenu.SetActive(false);
             mainMenu.SetActive(false);
+
+            //SFX audio On
+            sfxMgrScript.TavernBGMOn();
+            rudeCustomer = GameObject.Find("Customer4(Clone)");
+            if (rudeCustomer != null)
+            {
+                sfxMgrScript.RudeCustomerSFXOn();
+            }
+
         }
     }
 }

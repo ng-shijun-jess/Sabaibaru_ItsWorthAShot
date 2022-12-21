@@ -6,6 +6,7 @@ public class SFXManager : MonoBehaviour
 {
     public AudioSource sfxBeerSnapped;
     public AudioSource sfxRudeCustomer;
+    public AudioSource sfxTavernBGM;
 
     public void BeerSnappedSFXOn()
     {
@@ -22,5 +23,15 @@ public class SFXManager : MonoBehaviour
     {
         sfxRudeCustomer.Stop();
         Debug.Log("Rude customer audio has stopped");
+    }
+    public void TavernBGMOFF()
+    {
+        sfxTavernBGM.Stop();
+        Debug.Log("Tavern BGM audio has stopped");
+    }
+    public void TavernBGMOn()
+    {
+        sfxTavernBGM.Play();
+        Debug.Log("Tavern BGM audio has stopped");
     }
 }

@@ -18,6 +18,10 @@ public class CoasterSocket3 : MonoBehaviour
     // Reference Text Canvas on customer prefab
     private Transform wrongDrinkCanvas;
 
+    //Reference to SFX Manager script
+    private GameObject sfxManager;
+    private SFXManager sfxManagerScript;
+
     public void InitialiseCustomerScript()
     {
         Debug.Log("InitialiseCustomer");
@@ -37,6 +41,10 @@ public class CoasterSocket3 : MonoBehaviour
     {
         if (drinkSnapped)
         {
+            sfxManager = GameObject.Find("SFXManager");
+            sfxManagerScript = sfxManager.GetComponent<SFXManager>();
+            sfxManagerScript.BeerSnappedSFXOn();
+
             if (other.gameObject.name == "Milk(Clone)" && currentDrink == "Milk")
             {
                 Debug.Log("Coaster");

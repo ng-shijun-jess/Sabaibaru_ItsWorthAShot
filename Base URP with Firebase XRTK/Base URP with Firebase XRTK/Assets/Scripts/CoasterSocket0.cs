@@ -18,6 +18,7 @@ public class CoasterSocket0 : MonoBehaviour
     // Reference Text Canvas on customer prefab
     private Transform wrongDrinkCanvas;
 
+    //Reference to SFX Manager script
     private GameObject sfxManager;
     private SFXManager sfxManagerScript;
 
