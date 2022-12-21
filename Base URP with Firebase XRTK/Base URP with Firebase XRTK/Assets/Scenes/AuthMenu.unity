@@ -10987,6 +10987,7 @@ MonoBehaviour:
   mainMenu: {fileID: 1918618221}
   errorMsgContent: {fileID: 11805484}
   displayName: {fileID: 1172875438}
+  fireBaseMgr: {fileID: 831259302}
 --- !u!4 &1943450328
 Transform:
   m_ObjectHideFlags: 0

@@ -38,6 +38,15 @@ public class SimpleAuthManager : MonoBehaviour
     public TextMeshProUGUI displayName;
 
 
+    private int customersHit;
+    private int customersLost;
+    private int customersChasedAway;
+    private int totalMoneyEarned;
+    private int totalTimeWorked;
+    private int customersServed;
+
+    public SimpleFirebaseManager fireBaseMgr;
+
 
     private void Awake()
     {
@@ -66,6 +75,8 @@ public class SimpleAuthManager : MonoBehaviour
             {
                 await CreateNewSimplePlayer(newPlayer.UserId, username, username, newPlayer.Email);
                 await UpdatePlayerDisplayName(username); //update user's display name in auth service
+
+                fireBaseMgr.UpdatePlayerStats(GetCurrentUser().UserId, totalMoneyEarned, totalTimeWorked, customersHit, customersLost, customersChasedAway, customersServed, GetCurrentUserDisplayName());
 
                 mainMenu.SetActive(true);
             }
@@ -104,7 +115,7 @@ public class SimpleAuthManager : MonoBehaviour
                 newPlayer = task.Result;
                 Debug.LogFormat("NewPlayer Details {0} {1}", newPlayer.UserId, newPlayer.Email);
 
-                
+
             }
         });
         return newPlayer;
