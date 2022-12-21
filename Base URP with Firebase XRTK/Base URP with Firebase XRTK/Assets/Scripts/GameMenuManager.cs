@@ -26,6 +26,7 @@ public class GameMenuManager : MonoBehaviour
     public void SignOut()
     {
         authMgr.SignOutUser();
+
     }
 
     public void StartGame()
@@ -33,9 +34,9 @@ public class GameMenuManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-
-    public void Leaderboard()
+    public void ExitGame()
     {
-        
+        Application.Quit();
     }
+
 }
