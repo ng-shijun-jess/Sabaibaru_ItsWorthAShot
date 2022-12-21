@@ -22,18 +22,20 @@ public class GameMenuManager : MonoBehaviour
     public GameObject leaderboardBtn;
 
 
-
+    //Sign the user out
     public void SignOut()
     {
         authMgr.SignOutUser();
 
     }
 
+    //Goes to the game scene to start game
     public void StartGame()
     {
         SceneManager.LoadScene(0);
     }
-
+    
+    //When player wishes to exit the game
     public void ExitGame()
     {
         Debug.Log("Quitting Game...");

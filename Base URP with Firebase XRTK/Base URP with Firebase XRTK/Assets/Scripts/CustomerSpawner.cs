@@ -165,6 +165,7 @@ public class CustomerSpawner : MonoBehaviour
         yield return null;
     }
 
+    //checing if spots are full or not
     private void Update()
     {
         if (usedSpots.Count == 5)

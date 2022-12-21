@@ -28,9 +28,10 @@ public class SimplePlayerStatsManager : MonoBehaviour
         UpdatePlayerStats(auth.GetCurrentUser().UserId); 
     }
 
+    //Updates the player stats text in player stat menu
     public async void UpdatePlayerStats(string uuid)
     {
-        SimplePlayerStats playerStats = await fbMgr.GetPlayerStats(uuid); //not working
+        SimplePlayerStats playerStats = await fbMgr.GetPlayerStats(uuid); 
         Debug.Log("player Stats...:  " + playerStats.SimplePlayerStatsToJson());
 
         customersHit.text = playerStats.customersHit.ToString();

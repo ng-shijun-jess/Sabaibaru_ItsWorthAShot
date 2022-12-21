@@ -41,6 +41,7 @@ public class CoasterSocket4 : MonoBehaviour
     {
         if (drinkSnapped)
         {
+            //Find the SFX and play Beer snapped audio
             sfxManager = GameObject.Find("SFXManager");
             sfxManagerScript = sfxManager.GetComponent<SFXManager>();
             sfxManagerScript.BeerSnappedSFXOn();

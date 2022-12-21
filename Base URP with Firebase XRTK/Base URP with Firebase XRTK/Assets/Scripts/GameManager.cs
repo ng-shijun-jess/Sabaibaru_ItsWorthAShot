@@ -61,21 +61,26 @@ public class GameManager : MonoBehaviour
     // Updating Money Earned on Board
     public TextMeshProUGUI moneyEarnedBoard;
 
+    //The default values
     private void Start()
     { 
+        
         isGameActive = true;
         isPlayerStatUpdated = false;
+
+        //Ensures that the values start at 0
         UpdateCustomersHit(0);
         UpdateCustomersLost(0);
         UpdateCustomersChasedAway(0);
         UpdateTotalMoneyEarned(0);
         UpdateTotalCustomersServed(0);
     }
-
+    //When application is running
     private void Update()
     {
         if (isGameActive)
         {
+            //Time works normally
             Time.timeScale = 1;
             time += 1 * Time.deltaTime;
 
@@ -165,7 +170,6 @@ public class GameManager : MonoBehaviour
     //update player stats 
     public void UpdatePlayerStat(int totalMoneyEarned, int totalTimeWorked, int customersHit, int customersLost, int customersChasedAway, int customersServed)
     {
-        
 
         firebaseMgr.UpdatePlayerStats(auth.GetCurrentUser().UserId, totalMoneyEarned, totalTimeWorked, customersHit, customersLost, customersChasedAway, customersServed, auth.GetCurrentUserDisplayName()); ///need to link this
     }
@@ -181,6 +185,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameActive)
         {
+            //Stops time
             Time.timeScale = 0;
             isGameActive = false;
             pauseMenu.SetActive(true);
@@ -190,10 +195,13 @@ public class GameManager : MonoBehaviour
             sfxMgrScript.TavernBGMOFF();
         }
     }
+
+    //Resume game
     public void Resume()
     {
         if (!isGameActive)
         {
+            //Removing the main menu and pause menu from game scene to comtinue game
             Time.timeScale = 1;
             isGameActive = true;
             pauseMenu.SetActive(false);

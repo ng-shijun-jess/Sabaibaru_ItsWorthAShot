@@ -111,6 +111,8 @@ public class SimpleFirebaseManager : MonoBehaviour
         });
 
     }
+
+    //Update eladerboard when player stats changed
     public void UpdatePlayerLeaderBoardEntry(string uuid, int highestMoneyEarned, long updatedOn)
     {
 
@@ -121,6 +123,7 @@ public class SimpleFirebaseManager : MonoBehaviour
         dbLeaderboardsReference.Child(uuid).Child("updatedOn").SetValueAsync(updatedOn);
     }
 
+    //leaderboard
     public async Task<List<SimpleLeaderBoard>> GetLeaderboard(int limit = 4)
     {
         Query q = dbLeaderboardsReference.OrderByChild("score").LimitToLast(limit);

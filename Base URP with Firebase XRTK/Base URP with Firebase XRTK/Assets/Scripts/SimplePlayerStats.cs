@@ -39,6 +39,7 @@ public class SimplePlayerStats
 
     }
 
+    //creating a default player stats
     public SimplePlayerStats(string userName, int highestMoneyEarned, int mostTimeWorked, int customersHit = 0, int customersLost = 0, int customersChasedAway = 0, int customersServed = 0)
     {
         this.userName = userName;

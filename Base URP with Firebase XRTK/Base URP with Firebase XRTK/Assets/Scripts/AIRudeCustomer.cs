@@ -80,7 +80,7 @@ public class AIRudeCustomer : MonoBehaviour
         }
     }
 
-
+    //When Rude customer collides with the drink
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Drink")
@@ -88,6 +88,7 @@ public class AIRudeCustomer : MonoBehaviour
             gameManagerScript.UpdateCustomersHit(1);/// Add Customers hit here                      DATABASE
             gameManagerScript.UpdateCustomersChasedAway(1);//update customer chased
 
+            //Turn off the audio for rude customer
             sfxManager = GameObject.Find("SFXManager");
             sfxManager.GetComponent<SFXManager>();
             sfxManagerScript.RudeCustomerSFXOff();

@@ -125,7 +125,7 @@ public class OrderSlipManager : MonoBehaviour
             }
         }
     }
-
+    //When called, the order slip will disappear
     public void OrderSlipDisable(int orderSlipIndex)
     {
         for (int i = 0; i < 5; i++)
