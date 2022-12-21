@@ -27,7 +27,7 @@ public class SpawnSpot : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         // Check if object is a customer
-        if (other.gameObject.tag == "Customer1" || other.gameObject.tag == "Customer2" || other.gameObject.tag == "Customer1" || other.gameObject.tag == "AICustomer")
+        if (other.gameObject.tag == "Customer1" || other.gameObject.tag == "Customer2" || other.gameObject.tag == "Customer3" || other.gameObject.tag == "AICustomer")
         {
             if (this.gameObject.tag == "spawnSpot0")
             {
