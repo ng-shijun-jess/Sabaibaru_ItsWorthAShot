@@ -36,7 +36,9 @@ public class GameMenuManager : MonoBehaviour
 
     public void ExitGame()
     {
+        Debug.Log("Quitting Game...");
         Application.Quit();
+
     }
 
 }
